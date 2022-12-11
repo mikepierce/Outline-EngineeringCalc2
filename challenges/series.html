@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math136 | Series </title>
+</head>
+
+<body>
+<header>
+    <h1> Series</h1>
+</header>
+
+<main>
+<ol>
+    <li class="star">
+    (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Stewart</a>)
+    Right-angled triangles are constructed as in the figure. 
+    Each triangle has height \(1\) and its base is the
+    hypotenuse of the preceding triangle. 
+    Show that this sequence of triangles makes indefinitely many
+    turns around \(P\) by showing that \(\sum\theta_n\) is a divergent series.
+    <figure>
+        <img width="432" src="img/spiral-triangles.png">
+    </figure>
+    </li>
+    <li class="starstar">
+What is the area of the region bounded between the curve 
+\(y = 2\mathrm{e}^{-x}\sin(x)\) and the positive \(x\)-axis? 
+Note this area is not simply equal to
+\[\int\limits_{0}^{\infty} 2\mathrm{e}^{-x}\sin(x) \,\mathrm{d}x\]
+    </li>
+    <li>
+        <h4> Koch’s Snowflake </h4>
+(<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_08_stu.pdf">Stewart</a>)
+To construct the snowflake curve, start with an equilateral triangle with sides of length \(1\).
+Step one in the construction is to divide each side into three equal parts, construct an equilateral
+triangle on the middle part, and then delete the middle part (see the figure). Step two is to repeat Step
+one for each side of the resulting polygon. This process is repeated at each succeeding step. The
+snowflake curve is the curve that results from repeating this process indefinitely.
+        <figure>
+            <img width="864" src="img/snowflake.png">
+        </figure>
+        <ol>
+            <li>
+Let \(s_n\), \(\ell_n\), and \(p_n\) represent the number of sides, the length of a side, 
+and the total length of the \(n\)<sup>th</sup> approximating curve 
+(the curve obtained after Step \(n\) of the construction), respectively.
+Find formulas for \(s_n\), \(\ell_n\), and \(p_n\).
+            </li>
+            <li>
+                Show that \(p_n \to \infty\) as \(n \to \infty\).
+            </li>
+            <li>
+                Sum an infinite series to find the area enclosed by the snowflake curve.
+            </li>
+        </ol>
+These last two parts show that the snowflake curve 
+is infinitely long but encloses only a finite area.
+    </li>
+    <li class="star">
+(<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_08_stu.pdf">Stewart</a>)
+Find the sum of the series
+\[
+1
++\frac 1 2
++\frac 1 3
++\frac 1 4
++\frac 1 6
++\frac 1 8
++\frac 1 9
++\frac{1}{12}
++\dotsb
+\]
+where the terms are the reciprocals of the positive integers 
+whose only prime factors are \(2\) and \(3\).
+    </li>
+    <li>
+(<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_08_stu.pdf">Stewart</a>)
+Suppose you have a large supply of books, all the same size, and you stack them at the edge of a
+table, with each book extending farther beyond the edge of the table than the one beneath it. Show
+that it is possible to do this so that the top book extends entirely beyond the table. In fact, show that
+the top book can extend any distance at all beyond the edge of the table if the stack is high enough.
+Use the following method of stacking: The top book extends half its length beyond the second
+book. The second book extends a quarter of its length beyond the third. The third extends one-sixth
+of its length beyond the fourth, and so on. (Try it yourself with a deck of cards.) Consider centers
+of mass.
+        <figure>
+            <img width="432" src="img/books.png">
+        </figure>
+    </li>
+    <li>
+(<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_08_stu.pdf">Stewart</a>)
+If \(p \gt 1\), what is a closed-form expression for
+\[
+\frac{
+1 
++ \frac{1}{2^p}
++ \frac{1}{3^p}
++ \frac{1}{4^p}
++ \dotsb
+}{
+1 
+- \frac{1}{2^p}
++ \frac{1}{3^p}
+- \frac{1}{4^p}
++ \dotsb
+}
+\]
+    </li>
+</ol>
+
+</main>
+</body>
+
+</html>
+
