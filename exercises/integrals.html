@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 | Integrals</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Integrals</h1>
+</header>
+<main>
+<ol>
+    <li>
+        <h4>Trigonometric Integrals</h4>
+        Evaluate the following integrals.
+        Solutions to a couple of them can be found in
+        <a href="http://tutorial.math.lamar.edu/Problems/CalcII/IntegralsWithTrig.aspx">Paul’s Online Notes</a>.
+        <ol class="inline">
+            <li> \(\displaystyle\int \sin^2(x)\cos^7(x)\,\mathrm{d}x\) </li>
+            <!-- <li> \(\displaystyle\int \sec^3(x)\tan^4(x)\,\mathrm{d}x\) % TOO HARD, try different powers of sec and tan </li> -->
+            <li> \(\displaystyle\int \cos^4(\theta) \,\mathrm{d}\theta\) </li>
+            <li> \(\displaystyle\int \tan^3(\mu)\,\mathrm{d}\mu\) </li>
+            <li> \(\displaystyle\int \cot(10z)\csc^4(10z)\,\mathrm{d}z\) </li>
+            <!-- <li> \(\displaystyle\int \frac{2+7\sin^3(x)}{\cos^2(x)}\,\mathrm{d}x\) </li> -->
+        </ol>
+    </li>
+    <li>
+        <h4>Trigonometric Substitution</h4>
+        Evaluate the following integrals.
+        They all require the same trick of making a trigonometric substitution,
+        so only do as many as it takes you to feel good.
+        <ol class="inline">
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{1+x^2}\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{1-x^2}\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{\sqrt{1-x^2}}\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{\sqrt{1+x^2}}\) </li>
+            <!-- becomes \int\sec(x)\dx, then needs tan(arcsec(x)) -->
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{\sqrt{x^2-1}}\) </li>
+            <!-- So chill it's just arcsec(x) -->
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{x\sqrt{x^2-1}}\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{x\sqrt{1-x^2}}\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{x\sqrt{1+x^2}}\) </li>
+            <li> \(\displaystyle\int x^3\sqrt{1-x^2}\mathrm{d}x\) </li>
+            <!-- becomes \int\cos^2(x)\dx, which requires half/double angles -->
+            <li> \(\displaystyle\int \sqrt{1-x^2}\,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int \sqrt{1+x^2}\,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int \sqrt{x^2-1}\,\mathrm{d}x\) </li>
+        </ol>
+    </li>
+    <li class="star">
+        <h4>Trigonometric Substitution</h4>
+        Evaluate the following integrals.
+        Solutions to these are written up in
+        <a href="http://tutorial.math.lamar.edu/Problems/CalcII/TrigSubstitutions.aspx">Paul's Online Math Notes</a>.
+        <ol class="inline">
+            <li> \(\displaystyle\int \sqrt{1-7\omega^2} \,\mathrm{d}\omega\) </li>
+            <li> \(\displaystyle\int\limits_{-7}^{-5} \frac{2\mathrm{d}y}{y^4\sqrt{y^2-25}}\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{\sqrt{9x^2-36x+37}} \) </li>
+        </ol>
+    </li>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_06_stu.pdf">Stewart</a>)
+        Evaluate \(\int \frac{\mathrm{d}x}{x^7-x}\).
+        The straightforward approach would be to start 
+        with partial fractions, but that would be brutal. 
+        Try a substitution.
+    </li>
+    <li class="star">
+        <h4>
+        The \(x \leftrightarrow \frac 1 x\) Trick
+        </h4>
+        Show that the integral
+        \[
+        \int\limits_{0}^{\infty} \frac{\ln(x)}{1+x^2} \,\mathrm{d}x
+        \]
+        evaluates to zero by breaking up its domain of integration into two parts
+        based on where the integrand is negative or positive,
+        and using the substitution \(x \leftrightarrow \frac{1}{x}\)
+        on one of those parts.
+        Then use this same trick to show that the value of the following
+        integral doesn't depend at all on the value of the real number \(p\).
+        \[
+        \int\limits_{0}^{\pi/2} \frac{\mathrm{d}\theta}{1+\big(\tan(\theta)\big)^p}
+        \]
+        <a href="math.stackexchange.com/q/2060187">See this MathSE post</a> 
+        for some reading on this trick.
+    </li>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_06_stu.pdf">Stewart</a>)
+        Evaluate
+        \(\displaystyle\int_0^1 \sqrt[3]{1-x^7} - \sqrt[7]{1-x^3} \,\mathrm{d}x\,.\)
+    </li>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_06_stu.pdf">Stewart</a>)
+        If \(n\) is a positive integer, prove that
+        \[\int\limits_0^1 \big(\ln(x)\big)^n \,\mathrm{d}x = (-1)^n n!\,.\]
+    </li>
+    <li class="starstar">
+        Evaluate these integrals.
+        <ol class="inline">
+            <li> \(\displaystyle\int \frac{1}{x^5+1} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int \sqrt{\tan(x)} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}x}{\sqrt{1+\mathrm{e}^{2x}}} \) </li>
+            <li> \(\displaystyle\int \ln\left(\mu + \sqrt{1-\mu}\right)\,\mathrm{d}\mu \) </li>
+            <li> \(\displaystyle\int \frac{\mathrm{d}\theta}{1-\sin^4(\theta)} \) </li>
+        </ol>
+    </li>
+    <li class="starstar">
+        <h4> Putnam </h4>
+        Evaluate these integrals.
+        <ol class="inline">
+            <li> \(\displaystyle \int\limits_0^1 \frac{\ln(x+1)}{1+x^2} \,\mathrm{d}x\) </li> <!-- 2005 -->
+            <li> \(\displaystyle \int\limits_2^4 \frac{\sqrt{\ln(9-x)}}{\sqrt{\ln(9-x)}+\sqrt{\ln(x+3)}} \,\mathrm{d}x\) </li> <!-- 1987 -->
+        </ol>
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+
