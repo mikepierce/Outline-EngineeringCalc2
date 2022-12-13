@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 | Improper Integrals </title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Improper Integrals</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        Evaluate each of the following integrals,
+        determining if the area described is or isn’t finite.
+        Some of these are borrowed from
+        <a href="http://tutorial.math.lamar.edu/Problems/CalcII/ImproperIntegrals.aspx">Paul’s Online Math Notes</a>,
+        so their solutions can be found there.
+        <ul class="inline">
+            <li> \(\displaystyle\int\limits_{0}^{\infty} x\mathrm{e}^{-x} \,\mathrm{d}x\) </li>
+            <!-- ><li> \(\displaystyle\int\limits_{\mathrm{e}}^{\infty} \frac{\mathrm{d}x}{x\ln(x)^2}\) </li> -->
+            <li> \(\displaystyle\int\limits_{0}^{\pi/2} \frac{\cos(x)}{\sqrt{\sin(x)}} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{-5}^{1} \frac{1}{10+2z} \,\mathrm{d}z\) </li>
+            <li> \(\displaystyle\int\limits_{0}^{4} \frac{x}{x^2-9} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{-\infty}^{\infty} \frac{6w^3}{(w^4+1)^2} \,\mathrm{d}w\) </li>
+            <li> \(\displaystyle\int\limits_{-1}^{1} \ln|x| \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{1}^{\infty} \frac{1}{x^3} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{1}^{\infty} \frac{1}{x^{1/3}} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{-\infty}^{1} \frac{3}{1+x^2} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{-\infty}^{0} \frac{\mathrm{e}^{\frac{1}{x}}}{x^2} \,\mathrm{d}x\) </li>
+            <li> \(\displaystyle\int\limits_{0}^{2} \frac{1}{(x-1)^4} \,\mathrm{d}x\) </li>
+        </ul>
+    </li>
+    <li>
+        Let’s define the function 
+        \(A(z) = \int_1^z x^{-p} \,\mathrm{d}x\)
+        for \(z\gt 1\).
+        <ol>
+            <li>
+            Show that if \(p=1\), then \(A(z) = \ln|z|\),
+            but that otherwise, for \(p\neq 1\), we have 
+            \[ A(z) = \frac{1}{1-p}\left(z^{1-p}-1\right)\,.  \]
+            </li>
+            <li>
+            Show that if \(p \in (0,1]\),
+            then \(\lim_{z \to \infty} A(z) = \infty\).
+            </li>
+            <li>
+            Now show that if \(p \gt 1\),
+            then \(\lim_{z \to \infty} A(z) = \frac{1}{p-1}\).
+            </li>
+        </ol>
+		Look out for the vocabulary term \dfn{\(p\)-series} 
+		later in the course, and remember this exercise when you see it.
+    </li>
+</ol>
+
+</main>
+</body>
+
+</html>
+
