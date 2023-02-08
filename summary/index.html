@@ -20,9 +20,9 @@
 <h1>Math136 |&nbsp;Engineering Calc&nbsp;II</h1>
 <ul>
     <li> <a href="../..">Mike Pierce</a> </li>
-    <li> <a href="..">Course Outline</a> </li>
+    <li> <a href="..">↖Course Outline</a> </li>
     <li> Work-in-Progress </li>
-    <li> Last tended 28 Jan 2023 </li>
+    <li> Last tended 8 Feb 2023 </li>
     <li> <a href="https://github.com/mikepierce/Outline-EngineeringCalc2">Fork on GitHub</a> </li>
     <li class="print"> Hosted at <a class="url" href="https://org.coloradomesa.edu/~mapierce2/136/summary">coloradomesa.edu/~mapierce2/136/summary</a> </li>
 </ul>
@@ -30,10 +30,11 @@
 
 <main>
 <p>
-    Sometimes the purpose of taking a course 
+    Sometimes the purpose of a course 
     becomes obfuscated over its duration;
-    it can become hard to appreciate the plot of a story 
-    when there’s too much exposition.
+    it can become hard to appreciate the overarching plot of a story 
+    when one spends months buried in fine exposition
+    and occasional side-plots.
     This narrative overview, in its brevity, 
     serves to summarize the plot of this course
     and to clarify our purpose,
@@ -44,24 +45,46 @@
 <section>
 <h2>Transcendental Functions</h2>
 <p>
-    In this late segment of the course, 
+    In this second semester of calculus
     we finally come around to introducing the transcendental functions
     \(\ln(x)\) and \(\mathrm{e}^x\).
 </p>
 <aside>
     Although it should be pointed out, 
     the trigonometric functions sine, tangent, secant, etc,
-    are <em>also</em> trigonometric functions;
-    the designers of most textbooks subtitled “late transcendentals”
+    are <em>also</em> transcendental functions;
+    the designers of most calculus textbooks subtitled “late transcendentals”
     don’t appear to be bothered by this.
 </aside>
 <p>
-    We go about introducing these functions by defining 
-    the (natural) logarithmic function in terms of an integral
+    We introduce these functions by <em>defining</em>
+    the (natural) logarithm as a definite integral
     \[ \ln(x) = \int\limits_1^x \frac{1}{t}\,\mathrm{d}t\,, \]
-    and from there defining \(\mathrm{e}^x\) as \(\ln^{-1}(x)\)
-    and investigating their derivatives, their antiderivatives,
-    and exponential/logarithmic functions of an arbitrary base from there.
+    and from there defining \(\mathrm{e}^x\) as \(\ln^{-1}(x)\).
+    After starting from this perspective though,
+    it becomes pertinent to figure out how the derivative 
+    of the inverse of a function relates the function itself.
+    Luckily the relationship is quite simple.
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        <p>
+        Know that the derivative of the inverse of a function 
+        can be expressed in terms of the derivative of that function as
+        \[ \frac{\mathrm{d}}{\mathrm{d}x}f^{-1}(x) = 
+        \frac{1}{f'\left(f^{-1}(x)\right)}\,. \]
+        This is known as the <em>inverse function theorem</em>.
+        </p>
+    </li>
+</ul>
+<p>
+    We can get a lot of information from the inverse function theorem,
+    not just about the derivative of \(\mathrm{e}^x\)
+    and about exponential/logarithmic function of non-natural bases,
+    but also about the inverses of trigonometric functions.
+    This information adds to our toolbox 
+    of differentiation and integrations skills.
 </p>
 <ul>
     <li>
@@ -69,59 +92,79 @@
         <p>
         Be able to calculate the derivative of 
         any rational sum, product, or composite
-        of exponential, logarithmic, or trigonometric functions.
+        of exponential or logarithmic functions of any base,
+        and of inverse trigonometric functions:
+        arcsine, arctangent, arcsecant, etc.
         </p>
     </li>
     <li>
         <h4>Skill</h4>
         <p>
-        Be able to calculate the integral of any rational sum
-        of exponential or logarithmic functions, 
-        or any integral that yields to a simple substitution.
+        Be able to calculate the antiderivative 
+        of any rational sum of exponential functions, 
+        or any antiderivative involving an exponential
+        that yields to substitution.
         </p>
     </li>
+    <li>
+        <h4>Skill</h4>
+        <p>
+        Recognize the patterns of the derivatives
+        of logarithmic and inverse trigonometric functions
+        when they appear as integrands
+        so as to calculate integrals when they appear.
+        </p>
+    </li>
+</ul>
+<p>
+    Beyond that core thread of new skills, 
+    we explore two miscellaneous skills
+    that required the language of logarithms 
+    to develop in their entirety.
+</p>
+<ul>
     <li>
         <h4>Skill</h4>
         <p>
         Be familiar with the technique of 
         <em>logarithmic differentiation</em>,
-        and know that this technique is critically helpful
-        for calculating the derivatives of functions of the form
+        and know that this technique is essential
+        to calculate the derivative of functions of the form
         \(f(x)^{g(x)}\) for non-constant \(f\) and \(g\).
         </p>
     </li>
+    <li>
+        <h4>Skill</h4>
+        <p>
+        Know how and when to apply <em>L’Hospital’s Rule</em>
+        to investigate the value of a limit.
+        </p>
+    </li>
 </ul>
 <p>
-    TK
+    Before we conclude our exploration of transcendental functions
+    and move on to a new chapter of the story,
+    there is one last sight we really should see,
+    just to say we saw it.
 </p>
 <ul>
     <li>
         <h4>Concept</h4>
         <p>
-        Know that we can express the derivative 
-        of the inverse of a function
-        in terms of the derivative of that function. 
-        In particular, know that we can find algebraic formulas
-        for the derivatives of the inverse trigonometric functions.
-        This idea is known as 
-        the <em>inverse function theorem</em>.
+        Be <em>familiar</em> with hyperbolic trigonometric functions:
+        what they are, how they relate to exponential functions,
+        and what their derivatives and antiderivatives look like.
         </p>
     </li>
 </ul>
 <p>
-    LHOPITAL
+    The addition of these logarithmic, exponential, 
+    trigonometric, and hyperbolic functions
+    completes the dictionary of differentiable functions
+    we’ve been building in this class,
+    and so we are now well-prepared to dive into 
+    the art and practice of evaluating integrals.
 </p>
-<!--
-<ul>
-    <li>
-        <h4>Concept</h4>
-        <p>
-        Understand what the notation
-        \( \lim\limits_{x \to x_0} f(x) \) means.
-        </p>
-    </li>
-</ul>
--->
 </section>
 
 <section>
