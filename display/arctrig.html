@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math136 | Inverse Trig Functions </title>
+</head>
+
+<body>
+<header>
+    <h1> Inverse Trig Functions</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        <em>Demonstrate</em> how to express
+        \(\frac{\mathrm{d}}{\mathrm{d}x}\arcsin(x)\)
+        without any trig or inverse trig functions.
+    </li>
+    <li>
+        <p>
+        Similarly, <em>demonstrate</em> how to calculate 
+        the derivatives of the other trig functions.
+        </p>
+        <details>
+            <summary> Derivative Formulas </summary>
+            <blockquote> 
+                \[
+                \frac{\mathrm{d}}{\mathrm{d}x} \arcsin(x) = \frac{1}{\sqrt{1-x^2}}
+                \qquad
+                \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arccsc}(x) = -\frac{1}{x\sqrt{x^2-1}}
+                \]
+                \[
+                \frac{\mathrm{d}}{\mathrm{d}x} \arccos(x) = -\frac{1}{\sqrt{1-x^2}}
+                \qquad
+                \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arcsec}(x) = \frac{1}{x\sqrt{x^2-1}}
+                \]
+                \[
+                \frac{\mathrm{d}}{\mathrm{d}x} \arctan(x) = \frac{1}{1+x^2}
+                \qquad
+                \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arccot}(x) = -\frac{1}{1+x^2}
+                \]
+            </blockquote>
+        </details>
+    </li>
+    <li>
+        (Stewart)
+        Calculate the values of these definite integrals:
+        \[
+        \int\limits_{1/4}^{\sqrt{3}/4} \frac{1}{\sqrt{1-4x^2}} \,\mathrm{d}x 
+        \qquad\quad
+        \int\limits_{0}^{\sqrt{3}} \frac{x}{x^4+9} \,\mathrm{d}x 
+        \]
+    </li>
+    <li>
+        What are formulas for the following derivatives:
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \arccos\left(\mathrm{e}^x\right)
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} 3\arctan(x^2-7)
+        \]
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \arcsin\left(\frac 1 x \right)
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}\theta} \arctan(\sin\theta)\arctan(\ln\theta)
+        \]
+    </li>
+    <li>
+        How do you write each of the following 
+        as an algebraic function of \(x\)? 
+        \[
+            \sin\left(2\arccos(x)\right)  
+            \qquad
+            \cos\left(2\mathrm{arcsec}(x)\right)  
+            \qquad
+            \sin\left(\frac 1 2 \arctan(x)\right)  
+        \]
+    </li>
+    <li>
+        (Stewart) 
+        It’s midnight.
+        You are standing on a relatively straight California beach,
+        staring at a lighthouse on an island two miles out,
+        your line-of-sight perpendicular to the shoreline,
+        as the beam of the lighthouse beacon sweeps 
+        over you, sweeps past you, disappears,
+        then sweeps towards you and over you again,
+        capturing you in its patina every \(20\) seconds.
+        <ol>
+            <li>
+                How fast is the illuminated portion of the shoreline moving
+                for the brief moment you are in it?
+            </li>
+            <li>
+                How fast is the illuminated portion of shoreline moving
+                the moment it is one mile past you down the beach?
+            </li>
+        </ol>
+    </li>
+</main>
+</body>
+
+</html>
+
