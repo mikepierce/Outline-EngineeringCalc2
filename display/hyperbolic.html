@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math136 | Hyperbolic Functions </title>
+</head>
+
+<body>
+<header>
+    <h1>Hyperbolic Functions</h1>
+</header>
+
+<main>
+<details>
+    <summary> Definitions </summary>
+    <blockquote> 
+        \[
+        \newcommand{\ex}{\mathrm{e}}
+        \sinh(x) = \frac{\ex^x-\ex^{-x}}{2}
+        \qquad
+        \mathrm{csch}(x) = \frac{1}{\sinh(x)}
+        \]
+        \[
+        \newcommand{\ex}{\mathrm{e}}
+        \cosh(x) = \frac{\ex^x+\ex^{-x}}{2}
+        \qquad
+        \mathrm{sech}(x) = \frac{1}{\cosh(x)}
+        \]
+        \[
+        \tanh(x) = \frac{\sinh(x)}{\cosh(x)}
+        \qquad
+        \coth(x) = \frac{1}{\tanh(x)}
+        \]
+    </blockquote>
+</details>
+
+<details>
+    <summary> Basic Identities </summary>
+    <blockquote> 
+        \[
+        \sinh(-x) = -\sinh(x)
+        \qquad
+        \cosh(-x) = \cosh(x)
+        \]
+        \[
+        \sinh^2(x) - \cosh^2(x) = 1
+        \qquad
+        1 - \tanh^2(x) = \mathrm{sech}^2(x)
+        \]
+        \[ \sinh(x+y) = \sinh(x)\cosh(y) + \cosh(x)\sinh(y) \]
+        \[ \cosh(x+y) = \cosh(x)\cosh(y) + \sinh(x)\sinh(y) \]
+    </blockquote>
+</details>
+
+<details>
+    <summary> Derivative Formulas </summary>
+    <blockquote> 
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \sinh(x) = \cosh(x)
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{csch}(x) = -\mathrm{csch}(x)\coth(x)
+        \]
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \cosh(x) = \sinh(x)
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{sech}(x) = -\mathrm{sech}(x)\tanh(x)
+        \]
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \tanh(x) = \mathrm{sech}^2(x)
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} \coth(x) = -\mathrm{csch}^2(x)
+        \]
+    </blockquote>
+</details>
+
+<details>
+    <summary> Logarithmic Formulas for Inverse Hyperbolic Functions</summary>
+    <blockquote> 
+        \[ \mathrm{arsinh}(x) = \ln\left(x+\sqrt{x^2+1}\right) \]
+        \[ \mathrm{arcosh}(x) = \ln\left(x+\sqrt{x^2-1}\right),\, x\geq 1 \]
+        \[ \mathrm{artanh}(x) = \frac{1}{2}\ln\left(\frac{1+x}{1-x}\right),\, |x| \lt 1 \]
+    </blockquote>
+</details>
+
+<details>
+    <summary> Derivatives of Inverse Hyperbolic Functions</summary>
+    <blockquote> 
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arsinh}(x) = \frac{1}{\sqrt{1+x^2}}
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arcsch}(x) = -\frac{1}{|x|\sqrt{x^2+1}}
+        \]
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arcosh}(x) = \frac{1}{\sqrt{x^2-1}}
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arsech}(x) = -\frac{1}{x\sqrt{1-x^2}}
+        \]
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{artanh}(x) = \frac{1}{1-x^2},\, |x| \lt 1
+        \qquad
+        \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arcoth}(x) = \frac{1}{1-x^2},\, |x| \gt 1
+        \]
+    </blockquote>
+</details>
+</main>
+</body>
+
+</html>
+
