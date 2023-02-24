@@ -17,12 +17,12 @@
 </head>
 
 <header>
-<h1>Math136 |&nbsp;Engineering Calc&nbsp;II</h1>
+<h1>Engineering Calc&nbsp;II Summary</h1>
 <ul>
     <li> <a href="../..">Mike Pierce</a> </li>
     <li> <a href="..">↖Course Outline</a> </li>
     <li> Work-in-Progress </li>
-    <li> Last tended 8 Feb 2023 </li>
+    <li> Last tended 22 Feb 2023 </li>
     <li> <a href="https://github.com/mikepierce/Outline-EngineeringCalc2">Fork on GitHub</a> </li>
     <li class="print"> Hosted at <a class="url" href="https://org.coloradomesa.edu/~mapierce2/136/summary">coloradomesa.edu/~mapierce2/136/summary</a> </li>
 </ul>
@@ -175,6 +175,183 @@
 
 <section>
 <h2>Techniques &amp; Applications of Integration</h2>
+<p>
+    We've seen already that its more complicated
+    to calculate antiderivative than derivatives.
+    Now we dip our toes into this complication.
+    Now begins the gauntlet. 
+</p>
+<p>
+    We know already that integrals are linear:
+    they break up across sums and constants factor out.
+    We also know to recognize a few integrals on sight
+    simply as being the derivatives of familiar functions.
+    And we have a single tool for computing derivatives, 
+    <em>substitution</em>,
+    which “undoes” the chain-rule of differentiation.
+    The first new tool we'll develop, 
+    called <em>integration by-parts</em> and whose essence is the equation
+    \[ \int u \,\mathrm{d}v = uv - \int v \,\mathrm{d}u\,, \]
+    is a way of “undoing” the product-rule of differentiation.
+</p>
+<p>
+    With this tool we'll finally be able to calculate 
+    formulas for the integrals
+    \[
+        \int \ln(x)\,\mathrm{d}x
+        \quad\text{and}\quad
+        \int \sec(x)\,\mathrm{d}x
+    \]
+    and move on to learning the tricks for dealing with 
+    more complicated trigonometric integrands like these:
+    \[
+        \int \sin^n(x)\cos^m(x)\,\mathrm{d}x
+        \quad
+        \int \sec^n(x)\tan^m(x)\,\mathrm{d}x
+        \quad
+        \int \sin(ax)\cos(bx)\,\mathrm{d}x
+    \]
+    The “trick” is to be able to fluently wield trigonometric identities
+    to rewrite the integrands, particularly the Pythagorean identities
+    \[
+        cos^2(x) + \sin^2(x) = 1
+        \qquad
+        1 + \tan^2(x) = sec^2(x)  
+    \]
+    along with the double/half-angle formulas 
+    and the product-to-sum formulas.
+    And this is a good trick; 
+    we get extra mileage out of those two Pythagorean identities
+    due to their ability to turn a sum/difference of squares
+    into a single square term, 
+    a technique known as <em>trigonometric substitution</em>.
+</p>
+<p>
+    The last technique of integration we'll cover
+    isn't so much about integration
+    as it is about writing a rational function
+    as a sum of smaller rational functions.
+    This sum is called its <em>partial fraction decomposition</em>.
+    To take the integral of a rational functions
+    it's much easier to take the integral of 
+    these smaller summands individually.
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Be able to employ any of the previous tools/techniques
+        to calculate formulas for indefinite integrals.
+    </li>
+</ul>
+<p>
+    This concludes the gauntlet 
+    of learning to manually compute some integrals,
+    so we should check back in with reality.
+    Not every integrals is computable.
+    I.e. not every integral can be expressed as a formula
+    in terms of elementary functions.
+    In practice when we need to compute the value
+    of a definite integral we can use a computer
+    to approximate it to arbitrary precision.
+    We've already talked about Riemann sums
+    and the midpoint rule and the trapezoid rule, 
+    but there are other methods.
+</p>
+<ul>
+    <li>
+        <h4>Concepts</h4>
+        Be <em>familiar</em> with techniques 
+        of numerically computing definite integrals,
+        particularly with the trapezoid rule 
+        and with Newton–Cotes formulas of higher degree,
+        and the bounds on their error.
+    </li>
+</ul>
+<p>
+    And in recent history there's been advances
+    in symbolically computing the formulas for <em>in</em>definite integrals
+    using sufficiently ... TK
+    <a href="https://www.wolframalpha.com">WolframAlpha</a>
+</p>
+<p>
+    Before moving on to applications of integration
+    we should address a geometric quirk that we've ignored so far,
+    but will become crucial to think about
+    later when discussing series.
+    <em>Unbounded regions <em>may</em> contain 
+    a finite amount of area.</em>
+    Considering unbounded regions “under” curves 
+    and the integrals that compute their area,
+    this means our bounds of integration may be \(\pm\infty\),
+    or that our curve may have an asymptote (pole)
+    between its bounds of integration.
+    Such integrals are called <em>improper</em>.
+    How do we handle improper integrals computationally? With limits.
+    If our bounds of integration are infinite,
+    \[
+        \int\limits_{-\infty}^{\infty} f(x) \,\mathrm{d}x
+        = \lim_{L\to-\infty}\int\limits_{L}^{0} f(x) \,\mathrm{d}x
+        + \lim_{R\to\infty}\int\limits_{0}^{R} f(x) \,\mathrm{d}x
+        \,,
+    \]
+    or if \(f\) has a pole at \(p\) between \(a\) and \(b\),
+    \[
+        \int\limits_{a}^{b} f(x) \,\mathrm{d}x
+        = \lim_{\ell\to p}\int\limits_{a}^{\ell} f(x) \,\mathrm{d}x
+        + \lim_{\rho\to p}\int\limits_{\rho}^{b} f(x) \,\mathrm{d}x
+        \,.
+    \]
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Be able to navigate the nuances of definite integrals
+        with bounds \(\pm \infty\),
+        or that contain poles within their domain of integration,
+        determining whether they converge or diverge,
+        and computing their value if they converge.
+    </li>
+</ul>
+<p>
+    After going over these techniques
+    and becoming comfortable with improper integrals,
+    we'll talk about a few “applications” of integration.
+    The first are applications within mathematics,
+    specifically within geometry,
+    whereas the others are sincere applications,
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Be able to write down an integral that computes
+        the arclength of a planar curve,
+        and be able to write down an integral that computes
+        the surface area of a solid generated 
+        by revolving a planar region about an axis.
+    </li>
+    <li>
+        <h4>Skill</h4>
+        Be able to write down an integral that computes
+        WATER PRESSURE
+        ... TK
+    </li>
+    <li>
+        <h4>Skill</h4>
+        Be able to write down integrals that compute
+        the coordinates of the center of mass (centroid)
+        of a given planar region.
+    </li>
+    <li>
+        <h4>Concept</h4>
+        Be <em>familiar</em> with other applications of integration
+        to biology, economics, and probability.
+    </li>
+</ul>
+<p>
+    Now that we are d ... TK
+</p>
+
+
 </section>
 
 <section>
