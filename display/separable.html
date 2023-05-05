@@ -24,34 +24,95 @@
 <main>
 <ol>
     <li>
-        Solve these differential equations.
-        Notice that no initial conditions are provided,
-        so you’re being asking for the <em>general</em> solution to each of these.
-        (I'm pretty sure these are separable …)
-        <ol class="inline">
-            <li> \(y\dot{y} + y^2 = 3ty\dot{y}+1\quad\) </li>
-            <li> \(y'\cot^2(x) + \tan(y) = 0\) </li>
-        </ol>
-        <ol class="inline">
-            <li> \(xy' - 27y' = 3(y-9)\quad\) </li>
-            <li> \((ty)^2+2y^2 + \dot{y} = 0\) </li>
-        </ol>
-        <ol class="inline">
-            <li> \(2\cos(t) = 3t^2-y'\quad\) </li>
-            <li> \(y'-6y = 4\quad\) </li>
-            <li> \(xy' - 2y' = 2(y-4)\) </li>
+        Solve the differential equation 
+        \(\dot y = 6y^2x\).
+    </li>
+    <li>
+        Solve the differential equation 
+        \(\dot y = 6y^2x\)
+        subject to the initial condition \(y(1) = 1/9\).
+    </li>
+    <li>
+        Solve the <em>initial value problem</em>:
+        What is a formula \(y = f(x)\) 
+        if \(\displaystyle \frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\mathrm{e}^x}{y}\)
+        and \(y(0)=1\)?
+    </li>
+    <li>
+        Find an <em>explicit</em> formula \(y = f(x)\)
+        for the general solution 
+        to each of the following differential equations.
+        \[
+            \dot y = x\mathrm{e}^{x^2-\ln\left(y^2\right)}
+            \qquad
+            x^2\dot y = \sec(y) - \dot y
+        \]
+        \[
+            \sin^2(y)\dot y = (1-\dot y)\cos^2(y)
+            \qquad
+            x\dot y = \sqrt{x^2 - (xy)^2}
+        \]
+    </li>
+</ol>
+
+<h3> Examples from Stewart </h3>
+<ol>
+    <li>
+        Consider the differential equation 
+        \(\displaystyle \dot y = \frac{x^2}{y^2} \).
+        <ol>
+            <li>
+                Calculate the general solution to the differential equation.
+            </li>
+            <li>
+                Calculate the particular solution to the differential equation
+                subject to the initial condition \(y(0)=2\).
+            </li>
         </ol>
     </li>
     <li>
+        Calculate a formula for the general solution to differential equation
+        \[\dot y = \frac{6x^2}{2y + \cos(y)}\,.\]
+        Note you can only find an <em>implicit</em> formula; 
+        you can’t solve for \(y\).
+    </li>
+    <li>
+        Calculate an <em>explicit</em> formula \(y = f(x)\)
+        for the general solution to differential equation
+        \[\frac{\mathrm{d}y}{\mathrm{d}x} = x^2y\,.\]
+</ol>
+
+<h3> Additional Exercises </h3>
+<ol>
+    <li>
         Solve these differential equations.
         Notice that no initial conditions are provided,
+        so you’re being asking for the <em>general</em> solution to each of these.
+        \[
+            y\dot{y} + y^2 = 3ty\dot{y}+1
+            \qquad
+            y'\cot^2(x) + \tan(y) = 0
+        \]
+        \[
+            xy' - 27y' = 3(y-9)
+            \qquad
+            (ty)^2+2y^2 + \dot{y} = 0
+        \]
+        \[
+            2\cos(t) = 3t^2-y'
+            \qquad
+            y'-6y = 4
+            \qquad
+            xy' - 2y' = 2(y-4)
+        \]
+    </li>
+    <li>
+        Solve these differential equations.
+        Notice that initial conditions are provided,
         so you’re being asking for the <em>particular</em> solution to each of these.
-        (I'm pretty sure these are separable …)
-        <ol class="inline">
-            <li> \(\frac{1}{t}\sec^2(y)\frac{\mathrm{d}y}{\mathrm{d}t} = 1\) where \(y(0)=1\). </li>
-            <li> \(\mathrm{e}^t - yy' = 0\) where \(y(0) = 3\). </li>
-            <li> \(y'' =  x^2 + 3\) where \(y=-4\) and \(y'=2\) when \(x=0\). </li>
-        </ol>
+        \[ \frac{1}{t}\sec^2(y)\frac{\mathrm{d}y}{\mathrm{d}t} = 1 \quad\text{where}\quad y(0)=1 \]
+        \[ \mathrm{e}^t - yy' = 0 \quad\text{where}\quad y(0) = 3 \]
+        \[ y'' =  x^2 + 3 \quad\text{where}\quad y=-4 \;\;\text{and}\;\; y'=2 \quad\text{when}\quad x=0 \]
     </li>
     <li>
         Given that \(y(3)=2\mathrm{e}\)

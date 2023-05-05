@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math136 | Taylor Series</title>
+</head>
+
+<body>
+<header>
+    <h1>Taylor Series</h1>
+</header>
+
+<main>
+<h3> Examples from Stewart </h3>
+<ol>
+    <li>
+        Consider the exponential function \(\mathrm{e}^x\).
+        <ol>
+            <li>
+                Calculate the MacLaurin series for the exponential function.
+            </li>
+            <li>
+                Evaluating this series at \(x = 1\)
+                notice we now have a novel series with value \(\mathrm{e}\).
+            </li>
+        </ol>
+    </li>
+    <li>
+        Recall that we already know the series presentation
+        \[\frac{1}{1-x} = 1+ x+x^2+x^3+\dotsb\]
+        for \(|x| \lt 1\).
+        Verify that this series is, in fact, the Taylor series
+        for the function \(f(x) = \frac{1}{1-x}\) centered at \(x=0\).
+    </li>
+    <li>
+        Find the MacLaurin series for sine and cosine
+        and their respective radii of convergence.
+    </li>
+    <li>
+        Find Maclaurin series for each of the following functions:
+        \[ x\cos(x) \qquad \qquad \qquad \ln(1+3x^2) \]
+    </li>
+    <li>
+        Calculate the sum of this series by recognizing it
+        as the Taylor series of a familiar function.
+        \[ \frac{1}{1\cdot 2^1} - \frac{1}{2\cdot 2^2} + \frac{1}{3\cdot 2^3} - \frac{1}{4\cdot 2^4} + \frac{1}{5\cdot 2^5} - \dotsb \]
+    </li>
+    <li>
+        We've seen that there is no formula for the function
+        \[ f(x) = \int\limits_0^x \mathrm{e}^{-t^2}\,\mathrm{d}t\,, \]
+        but as luck would have it, there is a power series presentation of \(f\).
+        Calculate the Taylor series for \(f\).
+    </li>
+    <li>
+        Evaluate this limit by considering the Taylor series for \(\mathrm{e}^x\).
+        \[\lim_{n \to 0} \frac{\mathrm{e}^x -1-x}{x^2} \]
+    </li>
+    <li>
+        Find the first three non-zero terms of the Taylor series
+        for each of the following functions. 
+        \[ \mathrm{e}^x\sin(x) \qquad \qquad \qquad \tan(x) \]
+    </li>
+</ol>
+
+<h3> Challenges </h3>
+<ol>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_08_stu.pdf">Stewart</a>)
+        Consider the function \[ f(x) = \frac{x}{1-x-x^2}\,.\]
+        <ol>
+            <li>
+                Show that the Maclaurin series of the function is \(\sum_{n=1}^\infty F_nx^n\)
+                where \(F_n\) is the \(n\)<sup>th</sup> Fibonacci number.
+                Ie, \(F_1 = F_2 = 1\) and \(F_n = F_{n-1} + F_{n-2}\).
+            </li>
+            <li>
+                By writing \(f(x)\) as a sum of partial fractions and thereby obtaining the Maclaurin series in a
+                different way, find an explicit formula for the \(n\)<sup>th</sup> Fibonacci number.
+            </li>
+        </ol>
+    </li>
+    <li class="starstar">
+        (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Stewart</a>)
+        Here’s a vintage method for calculating 
+        the decimal presentation of \(\pi\).
+        <ol>
+            <li>
+            Show that for \(xy \neq -1\)
+            \[\arctan(x) - \arctan(y) = \arctan\left(\frac{x-y}{1+xy}\right)\]
+            if the left side lies between \(-\pi/2\) and \(\pi/2\).
+            </li>
+            <li>
+            Show that 
+            \[\arctan\frac{120}{119} - \arctan\frac{1}{239} = \frac \pi 4\,.\]
+            </li>
+            <li>
+            Deduce the following formula of John Machin (1680-1751):
+            \[4\arctan\frac 1 5 - \arctan\frac{1}{239} = \frac{\pi}{4}\]
+            </li>
+            <li>
+            Use the Maclaurin series for arctan to show that
+            \[ 0.197395560 \lt \arctan\frac 1 5  \lt 0.197395562 \]
+            and
+            \[ 0.004184075 \lt \arctan\frac{1}{239} \lt 0.004184077 \]
+            </li>
+            <li>
+            Deduce that, correct to seven decimal places,
+            \(\pi \approx~ 3.1415927\)
+            </li>
+        </ol>
+Machin used this method in 1706 to find \(\pi\) correct to 100 decimal places. 
+Recently, with the aid of computers, the value of \(\pi\) has been computed 
+to increasingly greater accuracy. In 1999, Takahashi and Kanada, 
+using methods of Borwein and Brent/Salamin, calculated the value of \(\pi\) to
+206,158,430,000 decimal places.
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

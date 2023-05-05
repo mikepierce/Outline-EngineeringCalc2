@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math136 | Differential Equations </title>
+</head>
+
+<body>
+<header>
+    <h1> Differential Equations </h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        Consider the differential equation 
+        \(xy'' + y' = 0\).
+        <ol>
+            <li>
+                Show that \(y = \ln(x)\)
+                is a <em>particular solution</em>
+                to this differential equation.
+            </li>
+            <li>
+                Show that \(y = 5\ln(x) + 2\)
+                is also a <em>particular solution</em>
+                to this differential equation.
+            </li>
+            <li>
+                Show that \(y = C_1\ln(x) + C_2\)
+                is a <em>general solution</em>
+                to this differential equation.
+            </li>
+            <li>
+                What is the particular solution 
+                to this differential equation
+                corresponding to <em>initial conditions</em>
+                \(y(1) = 3\) and \(y(\mathrm{e}) = 5\)?
+            </li>
+        </ol>
+    </li>
+    <li>
+        Consider the differential equation 
+        \(\dot{y} = t^2 + 2\cos(t)\).
+        <ol>
+            <li>
+                What is the <em>general solution</em>
+                to this differential equation?
+            </li>
+            <li>
+                What is the particular solution 
+                to this differential equation
+                corresponding to the <em>initial condition</em>
+                \(y\left(\frac{\pi}{2}\right) = \frac{\pi^3}{24}\)?
+            </li>
+            <li>
+                An adult is riding their tricycle along 
+                the straight road that passes by their house.
+                Their velocity \(\dot y\) (mph) can be modelled by 
+                the differential equation \(\dot{y} = t^2 + 2\cos(t)\)
+                as a function of \(t\) hours since they left their house.
+                If the tricyclist was \(\frac{\pi^3}{24}\) miles from their house
+                \(\frac{\pi}{2}\) hours after they left,
+                how far will the tricyclist be from their home in \(2\pi\) hours?
+            </li>
+        </ol>
+    </li>
+</ol>
+
+<h3> Examples from Stewart</h3>
+<ol>
+    <li>
+        Determine whether the function \(y = x + \frac 1 x\)
+        is a solution to either of the following differential equations.
+        \[
+        x\dot{y} + y = 2x
+        \qquad
+        x\ddot{y} + 2\dot{y} = 0
+        \]
+    </li>
+    <li>
+        Show that every member of the family of functions
+        \[y = \frac{1+c\mathrm{e}^t}{1-c\mathrm{e}^t}\]
+        is a solution to the differential equation 
+        \(\dot{y} = \frac{1}{2}\left(y^2-1\right)\).
+    </li>
+    <li>
+        Find a solution to the differential equation
+        \(\dot{y} = \frac{1}{2}\left(y^2-1\right)\)
+        that satisfies the <em>initial condition</em> \(y(0)=2\).
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math136 | Parametric Curves </title>
+</head>
+
+<body>
+<header>
+    <h1> Parametrically-Defined Curves </h1>
+</header>
+<ol>
+    <li>
+        Consider the curve segment 
+        defined for \(t\) between \(0\) and \(\pi\)
+        by the coordinates:
+        \[x(t) = \sin(t) \quad\text{and}\quad y(t) = \sin(t)\cos(t)\]
+        <ol>
+            <li>
+                Confirm that the initial point and terminal point 
+                of this curve segment are the same point,
+                making it a closed curve.
+            </li>
+            <li>
+                What is an equation for the line tangent to the curve
+                at the point where \(t = \pi/3\)?
+            </li>
+            <!--
+            <li>
+                For what value(s) of \(t\) 
+                is the slope of the line tangent to the curve
+                equal to \(1\)?
+            </li>
+            -->
+            <li>
+                Let \(\mathrm{R}\) be the region enclosed by this curve.
+                What is the area of \(\mathrm{R}\)?
+            </li>
+            <li>
+                Write down an integral that computes 
+                the length of this curve.
+            </li>
+            <li>
+                What is the surface area of the solid generated
+                by revolving \(\mathrm{R}\) about the \(x\)-axis?
+            </li>
+        </ol>
+    </li>
+</ol>
+
+<main>
+<h3> Examples from Stewart </h3>
+<ol>
+    <li>
+        Sketch the <em>cycloid</em> curve defined parametrically by
+        \[x(\theta) = 7(\theta-\sin(\theta))
+        \quad\text{and}\quad y(\theta) = 7(1-\cos(\theta))\]
+        <ol>
+            <li>
+                Calculate the slope of the line tangent to the cycloid 
+                at the point where \(\theta = \pi/3\).
+            </li>
+            <li>
+                At what points on the cycloid is the tangent line 
+                perfectly horizontal?
+                At what points on the cycloid is the tangent line 
+                perfectly vertical?
+            </li>
+            <li>
+                Calculate the area of the region 
+                under one “arch” of the cycloid 
+            </li>
+            <li>
+                Calculate the length of a single “arch”
+                of the cycloid.
+            </li>
+        <ol>
+    </li>
+</ol>
+
+</main>
+</body>
+
+</html>
+
