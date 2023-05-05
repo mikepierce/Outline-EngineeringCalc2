@@ -8,7 +8,7 @@ It’s augmented with links to notes, video lectures,
 exercises, demonstrations in Desmos,
 and some extra-curricular digressions.
 The primary narrative follows 
-[Calculus,9E (late transcendentals) by Stewart](https://www.stewartcalculus.com).
+[*Calculus 9E*  by Stewart](https://www.stewartcalculus.com).
 
 ### Use this Outline
 
