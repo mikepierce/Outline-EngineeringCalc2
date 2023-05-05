@@ -2,28 +2,28 @@
 <html lang='en'>
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Course Outline and Resources for Calculus for Engineers II">
-    <meta name="author" content="Mike Pierce">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 | Engineering Calc II</title>
+    <meta name="author" content="Mike Pierce">
+    <meta name="description" content="Course Outline and Resources for Calculus for Engineers II">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    
     <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css"/>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
-    <title>Math136 | Engineering Calc II</title>
 </head>
 
 <header>
 <h1>Engineering Calc&nbsp;II Summary</h1>
 <ul>
     <li> <a href="../..">Mike Pierce</a> </li>
-    <li> <a href="..">↖Course Outline</a> </li>
-    <li> Work-in-Progress </li>
-    <li> Last tended 22 Feb 2023 </li>
-    <li> <a href="https://github.com/mikepierce/Outline-EngineeringCalc2">Fork on GitHub</a> </li>
+    <li> Math136 </li>
+    <li class="screen"> <a href="..">↖Course Outline</a> </li>
+    <li class="screen"> <a href="Math136 _ Engineering Calc II.pdf">Print PDF</a></li>
+    <li class="screen"> <a href="https://github.com/mikepierce/Outline-EngineeringCalc2">Fork on GitHub</a> </li>
     <li class="print"> Hosted at <a class="url" href="https://org.coloradomesa.edu/~mapierce2/136/summary">coloradomesa.edu/~mapierce2/136/summary</a> </li>
 </ul>
 </header>
@@ -43,38 +43,39 @@
 </p>
 
 <section>
-<h2>Transcendental Functions</h2>
+<h2 id="transcendental">Transcendental Functions</h2>
 <p>
-    In this second semester of calculus
-    we finally come around to introducing the transcendental functions
-    \(\ln(x)\) and \(\mathrm{e}^x\).
+    In this second semester studying calculus
+    we start by introducing the familiar 
+    <dfn title="This just means `not algebraic`. I.e. not a polynomial function.">transcendental</dfn> functions
+    \(\ln(x)\) and \(\mathrm{e}^x\) from a new perspective.
 </p>
 <aside>
-    Although it should be pointed out, 
-    the trigonometric functions sine, tangent, secant, etc,
-    are <em>also</em> transcendental functions;
-    the designers of most calculus textbooks subtitled “late transcendentals”
-    don’t appear to be bothered by this.
+    Note, the trigonometric functions sine, arctangent, etc,
+    are <em>also</em> transcendental functions,
+    though the designers of most calculus textbooks subtitled “late transcendentals”
+    don’t appear to be bothered introducing them early.
 </aside>
 <p>
     We introduce these functions by <em>defining</em>
-    the (natural) logarithm as a definite integral
+    the (natural) logarithm function as a definite integral
     \[ \ln(x) = \int\limits_1^x \frac{1}{t}\,\mathrm{d}t\,, \]
-    and from there defining \(\mathrm{e}^x\) as \(\ln^{-1}(x)\).
-    After starting from this perspective though,
+    and from there defining \(\mathrm{e}^x\) as its inverse.
+    Starting from this perspective though,
     it becomes pertinent to figure out how the derivative 
     of the inverse of a function relates the function itself.
-    Luckily the relationship is quite simple.
+    Thankfully the <em>inverse function theorem</em>
+    gives us a succinct formula for the relationship:
+    \[ \left(f^{-1}\right)' = \frac{1}{f' \circ f^{-1}}\,. \]
 </p>
 <ul>
     <li>
-        <h4>Concept</h4>
+        <!-- SLO: Compute inverse functions and their derivatives -->
+        <h4>Skill</h4>
         <p>
-        Know that the derivative of the inverse of a function 
-        can be expressed in terms of the derivative of that function as
-        \[ \frac{\mathrm{d}}{\mathrm{d}x}f^{-1}(x) = 
-        \frac{1}{f'\left(f^{-1}(x)\right)}\,. \]
-        This is known as the <em>inverse function theorem</em>.
+        Be able to compute a formula 
+        for the derivative of a function
+        given a formula for the derivative of its inverse.
         </p>
     </li>
 </ul>
@@ -83,79 +84,70 @@
     not just about the derivative of \(\mathrm{e}^x\)
     and about exponential/logarithmic function of non-natural bases,
     but also about the inverses of trigonometric functions.
-    This information adds to our toolbox 
-    of differentiation and integrations skills.
 </p>
 <ul>
+    <li>
+        <!-- SLO: Perform the Calculus of exponential, logarithmic, inverse trigonometric and hyperbolic functions -->
+        <h4>Fact</h4>
+        <p>
+        Know the derivatives and antiderivatives
+        of exponential, logarithmic, and inverse trigonometric functions.
+        </p>
+    </li>
     <li>
         <h4>Skill</h4>
         <p>
         Be able to calculate the derivative of 
         any rational sum, product, or composite
         of exponential or logarithmic functions of any base,
-        and of inverse trigonometric functions:
-        arcsine, arctangent, arcsecant, etc.
-        </p>
-    </li>
-    <li>
-        <h4>Skill</h4>
-        <p>
-        Be able to calculate the antiderivative 
-        of any rational sum of exponential functions, 
-        or any antiderivative involving an exponential
-        that yields to substitution.
-        </p>
-    </li>
-    <li>
-        <h4>Skill</h4>
-        <p>
-        Recognize the patterns of the derivatives
-        of logarithmic and inverse trigonometric functions
-        when they appear as integrands
-        so as to calculate integrals when they appear.
+        and of inverse trigonometric functions.
+        Also be able to calculate the antiderivative 
+        of any “simple” rational sum or composite
+        of such functions.
         </p>
     </li>
 </ul>
 <p>
-    Beyond that core thread of new skills, 
-    we explore two miscellaneous skills
-    that required the language of logarithms 
-    to develop in their entirety.
+    Beyond that core narrative
+    we build two new tools 
+    with the help of logarithms.
 </p>
 <ul>
     <li>
         <h4>Skill</h4>
         <p>
-        Be familiar with the technique of 
-        <em>logarithmic differentiation</em>,
-        and know that this technique is essential
-        to calculate the derivative of functions of the form
+        Know the technique of <em>logarithmic differentiation</em>,
+        and be able to calculate the derivative of functions of the form
         \(f(x)^{g(x)}\) for non-constant \(f\) and \(g\).
         Explicitly as a formula,
-        \[
-        \frac{\mathrm{d}}{\mathrm{d}x} \left(f(x)^{g(x)}\right)
+        \[ 
+        \left(f(x)^{g(x)}\right)'
         = f(x)^{g(x)}\left(g(x)\frac{f'(x)}{f(x)} 
-        + g'(x)\ln\big(f(x)\big) \right).
+        + g'(x)\ln\!\big(f(x)\big) \right).
         \]
         </p>
     </li>
     <li>
+        <!-- SLO: Apply L’Hospital’s Rule to find limits of functions -->
         <h4>Skill</h4>
         <p>
-        Know how and when to apply <em>L’Hospital’s Rule</em>
-        to investigate the value of a limit.
+        Be able to apply <em>L’Hospital’s Rule</em> to evaluate limits:
+        for suitable functions \(f\) and \(g\) such that either 
+        \(\lim_{n\to a} f(x) = \lim_{n\to a} g(x) =0\)
+        or \(\lim_{n\to a} f(x) = \lim_{n\to a} g(x) =\pm\infty\),
+        \[ \lim_{n\to a} \frac{f(x)}{g(x)} = \lim_{n\to a} \frac{f'(x)}{g'(x)} \]
+        if the right-most limit exists.
         </p>
     </li>
 </ul>
 <p>
-    Before we conclude our exploration of transcendental functions
-    and move on to a new chapter of the story,
+    Before we conclude our exploration of transcendental functions,
     there is one last sight we really should see,
-    just to say we saw it.
+    just to be aware of.
 </p>
 <ul>
     <li>
-        <h4>Concept</h4>
+        <h4>Fact</h4>
         <p>
         Be <em>familiar</em> with hyperbolic trigonometric functions:
         what they are, how they relate to exponential functions,
@@ -174,54 +166,35 @@
 </section>
 
 <section>
-<h2>Techniques &amp; Applications of Integration</h2>
+<h2 id="integration">Techniques &amp; Applications of Integration</h2>
 <p>
-    We’ve seen already that its more complicated
-    to calculate antiderivative than derivatives.
-    Now we dip our toes into this complication.
+    We’ve seen already that it’s more complicated
+    to calculate formulas for antiderivatives than for derivatives.
+    Now we dip our toes into this complexity.
     Now begins the gauntlet. 
 </p>
 <p>
-    We know already that integrals are linear:
-    they break up across sums and constants factor out.
+    First remember integrals are linear:
+    they break up across sums/differences, 
+    and constants may be factored out.
     We also know to recognize a few integrals on sight
     simply as being the derivatives of familiar functions.
     And we have a single tool for computing derivatives, 
     <em>substitution</em>, which “undoes” the chain-rule of differentiation.
-    The first new tool we’ll develop in this class 
-    is called <em>integration by-parts</em>,
-    a way of “undoing” the product-rule of differentiation.
-    The essence of integration by-parts is the formula,
-    \[ \int u \,\mathrm{d}v = uv - \int v \,\mathrm{d}u\,, \]
+    The first new tool we’ll develop is called <em>integration by-parts</em>,
+    a way of “undoing” the product-rule of differentiation,
+    the utility of which is captured by the formula
+    \[ \int u \,\mathrm{d}v = uv - \int v \,\mathrm{d}u\,. \]
 </p>
 <p>
     With this tool we’ll finally be able to calculate 
-    formulas for the integrals
-    \[
-        \int \ln(x)\,\mathrm{d}x
-        \quad\text{and}\quad
-        \int \sec(x)\,\mathrm{d}x
-    \]
+    formulas for the integrals of the functions 
+    \(\ln(x)\) and \(\sec(x)\)
     and move on to learning the tricks for dealing with 
-    more complicated trigonometric integrands like these:
-    \[
-        \int \sin^n(x)\cos^m(x)\,\mathrm{d}x
-        \quad
-        \int \sec^n(x)\tan^m(x)\,\mathrm{d}x
-        \quad
-        \int \sin(ax)\cos(bx)\,\mathrm{d}x
-    \]
-    The “trick” is to be able to fluently wield trigonometric identities
-    to rewrite the integrands, particularly the Pythagorean identities
-    \[
-        cos^2(x) + \sin^2(x) = 1
-        \qquad
-        1 + \tan^2(x) = sec^2(x)  
-    \]
-    along with the double/half-angle formulas 
-    and the product-to-sum formulas.
-    And this is a good trick; 
-    we get extra mileage out of those two Pythagorean identities
+    more complicated trigonometric integrands.
+    The “trick” is usually to cleverly wield 
+    some trigonometric identities to rewrite the integrands.
+    We get extra mileage out of the Pythagorean identities in particular
     due to their ability to turn a sum/difference of squares
     into a single square term, a technique known as 
     <em>trigonometric substitution</em>.
@@ -229,69 +202,70 @@
 <p>
     The last technique of integration we’ll cover
     isn’t so much about integration
-    as it is about writing a rational function
-    as a sum of smaller rational functions.
-    This sum is called its <em>partial fraction decomposition</em>.
-    To take the integral of a rational functions
-    it’s much easier to take the integral of 
-    these smaller summands individually.
-    While learning these we see that it also pays
-    be generally be adept at algebraic manipulations 
-    while integrating functions.
+    as it is about writing a rational expression
+    as a sum of polynomials and rational expression
+    with degree-1 or -2 denominators.
+    This sum is called its <em>partial fraction decomposition</em>,
+    and is straightforward to integrate
+    using previously learned techniques.
 </p>
 <ul>
     <li>
+        <!-- SLO: Compute integrals by a variety of techniques, 
+            such has integration by parts, trigonometric substitution, 
+            partial fractions, using tables and technology; 
+            including improper integrals -->
         <h4>Skill</h4>
         Be able to employ any of the previous tools/techniques
-        to calculate formulas for indefinite integrals.
+        to find formulas for indefinite integrals,
+        or to calculate values of definite integrals,
     </li>
 </ul>
 <p>
     This concludes the gauntlet 
-    of learning to manually compute some integrals,
-    so we should check back in with reality.
-    Not every integrals is computable.
-    I.e. not every integral can be expressed as a formula
+    of learning to manually compute certain integrals,
+    so we should step back and discuss the broader context.
+    Not every function’s antiderivative is computable from its formula.
+    I.e. not every indefinite integral can be expressed as a formula
     in terms of elementary functions.
     In practice when we need to compute the value
     of a definite integral we can use a computer
     to approximate it to arbitrary precision.
-    We’ve already talked about Riemann sums
-    and the midpoint rule and the trapezoid rule, 
+    You already know about Riemann sums,
     but there are other methods.
 </p>
 <ul>
     <li>
         <h4>Concepts</h4>
         Be <em>familiar</em> with techniques 
-        of numerically computing definite integrals,
-        particularly with the trapezoid rule 
-        and with Newton–Cotes formulas of higher degree,
-        and the bounds on their error.
+        of numerically computing the value of definite integrals,
+        particularly with the <em>trapezoid rule</em>,
+        but also with the <em>Newton–Cotes formulas</em> 
+        of higher degree, and with the bounds on their error.
     </li>
 </ul>
 <p>
-    And in recent history there’s been advances
+    In recent history there’s been advances
     in symbolically computing the formulas for <em>in</em>definite integrals
     using sufficiently sophisticated symbolic computer algebra systems (CAS).
     You can get a small taste of this sophistication by asking 
     <a href="https://www.wolframalpha.com">WolframAlpha</a>
-    to evaluate an integral for you.
+    to calculate a formula for an integral for you.
 </p>
 <p>
     Before moving on to applications of integration
     we should address a geometric quirk that we’ve ignored so far,
     but will become crucial to think about
-    later when discussing series.
-    <em>Unbounded regions <em>may</em> contain 
-    a finite amount of area.</em>
+    later when discussing series:
+    unbounded regions <em>may</em> contain 
+    a finite amount of area.
     Considering unbounded regions “under” curves 
     and the integrals that compute their area,
     this means our bounds of integration may be \(\pm\infty\),
     or that our curve may have an asymptote (pole)
     between its bounds of integration.
-    Such integrals are called <em>improper</em>.
-    How do we handle improper integrals computationally? With limits.
+    Such integrals are called <em>improper</em>,
+    and, computationally, we handle improper integrals with limits.
     If our bounds of integration are infinite,
     \[
         \int\limits_{-\infty}^{\infty} f(x) \,\mathrm{d}x
@@ -302,19 +276,19 @@
     or if \(f\) has a pole at \(p\) between \(a\) and \(b\),
     \[
         \int\limits_{a}^{b} f(x) \,\mathrm{d}x
-        = \lim_{\ell\to p}\int\limits_{a}^{\ell} f(x) \,\mathrm{d}x
-        + \lim_{\rho\to p}\int\limits_{\rho}^{b} f(x) \,\mathrm{d}x
+        = \lim_{\ell\to p^{-}}\int\limits_{a}^{\ell} f(x) \,\mathrm{d}x
+        + \lim_{r\to p^{+}}\int\limits_{r}^{b} f(x) \,\mathrm{d}x
         \,.
     \]
 </p>
 <ul>
     <li>
         <h4>Skill</h4>
-        Be able to navigate the nuances of definite integrals
-        with bounds \(\pm \infty\),
-        or that contain poles within their domain of integration,
-        determining whether they converge or diverge,
-        and computing their value if they converge.
+        Be able to navigate the nuances of improper integrals,
+        compute their value if they converge,
+        and determining whether they converge or diverge
+        by comparing their integrands to simpler functions
+        whose convergence/divergence is known.
     </li>
 </ul>
 <p>
@@ -322,15 +296,17 @@
     and becoming comfortable with improper integrals,
     we’ll talk about a few “applications” of integration.
     The first are applications within mathematics,
-    specifically within geometry,
+    specifically within geometry, 
     whereas the others are sincere applications,
 </p>
 <ul>
     <li>
+        <!-- SLO: Use differentiation and integration 
+            to solve application problems -->
         <h4>Skill</h4>
         Be able to write down an integral that computes
-        the arclength of a planar curve,
-        and be able to write down an integral that computes
+        the arclength of a planar curve.
+        Be able to write down an integral that computes
         the surface area of a solid generated 
         by revolving a planar region about an axis.
     </li>
@@ -343,24 +319,259 @@
     <li>
         <h4>Concept</h4>
         Be <em>familiar</em> with other applications of integration
-        to biology, economics, and probability.
+        to engineering, biology, economics, and probability.
     </li>
 </ul>
 <p>
     Then since we’re talking about applications of calculus anyways,
-    now is a good time to introduce the predominant character 
-    of the entire field of applied mathematics: a differential equation.
+    now is a good time to introduce the main character 
+    from the field of applied mathematics: the differential equation.
 </p>
-
-
 </section>
 
 <section>
-<h2>ODEs &amp; Coordinate Geometry</h2>
+<h2 id="odes-geometry">Differential Equations &amp; Coordinate Geometry</h2>
+<p>
+    Before moving on the final major topic of the course,
+    we should take a quick foray into these two topics which,
+    though they feel rather tangential to the narrative of this course,
+    are still important to cover since each serves as the focus
+    of math classes you’ll likely take after this one.
+</p>
+<p>
+    First, having developed some fluency with integration,
+    we can now talk about the topic of solving differential equations,
+    a practice so ubiquitous in research and industry
+    that there are many college courses dedicated to it exclusively.
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        Know the definition of a <em>differential equation</em>,
+        what it means for a function to be a <em>solution</em> to a differential equation,
+        the difference between an <em>implicit</em> and an <em>explicit</em> solution,
+        the difference between a <em>general</em> and a <em>particular</em> solution,
+        and how <em>initial conditions</em> determine a particular solution.
+    </li>
+    <li>
+        <h4>Skill</h4>
+        Be able to sketch the <em>direction field</em> 
+        of a differential equation of the form \(\dot{y} = f(x,y)\)
+        and be able to sketch a particular solution based on the direction field.
+    </li>
+    <li>
+        <!-- SLO: Solve and interpret basic differential equations, 
+            such as separable equations -->
+        <h4>Skill</h4>
+        Be able to solve any sufficiently reasonable
+        <em>separable</em> differential equation.
+    </li>
+</ul>
+<p>
+    Second, we’ve developed the theory of calculus 
+    quite thoroughly up to this point,
+    but only from a limited perspective: 
+    the perspective of single-variable real-valued functions
+    and their graphs plotted in rectangular (Cartesian) coordinates.
+    The topic of <em>multi</em>-variable functions is a broad one
+    reserved for another class, but we have time to explore beyond 
+    the scope of functions and their graphs in rectangular coordinates in this class.
+    For example, what about curves in rectangular coordinates 
+    that aren’t the graph of a function at all?
+    What about curves that are the graph of a function plotted 
+    in polar coordinates instead of rectangular?
+    The calculus knowledge we’ve developed transfers over to these settings.
+</p>
+<p>
+    The graph \(y = f(x)\) of a function \(f\) 
+    is the set of all points \(\big(x,f(x)\big)\) in the \((x,y)\)-plane;
+    the \(y\)-coordinate is a function of the \(x\)-coordinate. 
+    But we can certainly define curves 
+    as the set of all points \(\big(x(t), y(t)\big)\),
+    where \(x\) and \(y\) are functions of some new parameter \(t\).
+    Such a curve is said to be <em>parametrically-defined</em>,
+    and if the functions \(x\) and \(y\) are differentiable/integrable,
+    we can calculate geometric measures of this curve 
+    using the tools we’ve developed with calculus.
+</p>
+<ul>
+    <!-- SLO: Solve problems involving parametric and polar curves, 
+        including arc length problems, area problems and tangent line problems -->
+    <li>
+        <h4>Skill</h4>
+        Be able to plot a parametrically-defined curve.
+    </li>
+    <li>
+        <h4>Skill</h4>
+        If one of the coordinates of a parametrically-defined curve
+        can be written as a function of the other coordinate, be able to do so.
+        Authors usually call this <em>elimination of a parameter</em>.
+    </li>
+    <li>
+        <h4>Skill</h4>
+        Be able to calculate 
+        the length of a parametrically-defined curve segment,
+        the area of a region bound by parametrically-defined curves,
+        and the equation of a line tangent to a parametrically-defined curve.
+    </li>
+</ul>
+<p>
+    Note that these parametric curves are still defined 
+    in rectangular space, the \((x,y)\)-plane.
+    Instead of generalizing how we describe the coordinates of points,
+    we could also plot points in a different space entirely:
+    polar space, the \(\big(r,\theta\big)\)-plane,
+    where every points is described by its distance \(r\) from the origin,
+    the angle \(\theta\) by which is it’s inclined from the positive \(x\)-axis.
+    Explicitly, the coordinates transformation is given by these equations:
+    \[
+    \begin{cases}
+    x=r\cos\theta
+    \\ y=r\cos\theta
+    \end{cases}
+    \quad\Longleftrightarrow\quad
+    \begin{cases}
+    r = \sqrt{x^2+y^2}
+    \\ \theta = \operatorname{atan2}(y,x)
+    \end{cases}
+    \]
+</p>
+<p>
+    Typically you see the \(r\) coordinate written as a function of \(\theta\)
+    and plot the graph \(r = f(\theta)\) in polar space.
+    It’s easy to plot the graph of a function \(f\) in rectangular space
+    to appear as if it’s plotted in polar space though.
+    For a parameter \(\theta\), the curve defined as all points
+    \(\big(f(\theta)\cos\theta, f(\theta)\sin\theta\big)\)
+    in rectangular space will be the same curve as if \(r = f(\theta)\)
+    were plotted in polar coordinates.
+    Using this, we can just refer to the calculus skills 
+    we developed in terms of parametric equations
+    to build new tools for the graphs of functions in polar coordinates.
+</p>
+<ul>
+    <li>
+        <!-- SLO: Solve problems involving parametric and polar curves, including arc length problems, area problems and tangent line problems -->
+        <h4>Skill</h4>
+        Be able to plot the graph of a function in polar coordinates.
+    </li>
+    <li>
+        <h4>Skill</h4>
+        Be able to calculate 
+        the arclength of a segment of a function’s graph in polar space,
+        the area of a region bound by graphs in polar space,
+        and the equation of a line tangent to a graph in polar space.
+    </li>
+</ul>
+<p>
+    We could describe curves in polar space parametrically too,
+    as the set of all points \(\big(r(t), \theta(t)\big)\) 
+    for some parameter \(t\), … but I’ve never heard anyone talk about this.
+</p>
 </section>
 
 <section>
-<h2>Sequences &amp; Series</h2>
+<h2 id="series">Taylor Series</h2>
+<p>
+    Every function we’ve dealt with so far has been 
+    a real-valued functions with real inputs. 
+    This last segment of the course pivots towards 
+    real-valued functions with positive integer inputs, <em>sequences</em>, 
+    with the goal of defining and exploring Taylor series.
+    One of the important questions we’ll want to answer about Taylor series
+    is when the sum of their coefficients, 
+    the <em>series</em> that their coefficients comprise, 
+    converges and sincerely defines a function,
+    so first we’ll spend some time studying the convergence of series.
+</p>
+<ul>
+    <li>
+        <!-- SLO: Test series for convergence by a variety of tests -->
+        <h4>Skill</h4>
+        Know what it means for a series to <em>converge absolutely</em>,
+        to <em>converge conditionally</em>, and to diverge,
+        and how to determine a series’ convergence using various tests.
+    </li>
+    <li>
+        <!-- SLO: Compute limits of sequences and series -->
+        <h4>Skill</h4>
+        Be able to compute the limit/value 
+        of certain convergent sequences and series
+        (e.g. geometric series).
+    </li>
+</ul>
+<p>
+    Once we’re trained to tell when a series converges,
+    we can apply this skill to decide where one defines a function.
+    The series \(\sum_{n=0}^{\infty} c_n(x-a)^n\)
+    is called <em>power series</em> centered at \(x=a\),
+    and can be thought of a polynomial with infinitely many terms.
+    A power series defines a function 
+    on some <em>interval of convergence</em> centered at \(x=a\)
+    consisting of all \(x\) for which 
+    the power series \(\sum c_n(x-a)^n\) converges.
+    This interval then serves as the domain of the function 
+    \(f(x) = \sum c_n(x-a)^n\).
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Know how to calculate the interval of convergence
+        and <em>radius of convergence</em> of a power series.
+    </li>
+</ul>
+<p>
+    We must also consider the opposite question,
+    not when a power series describes a function,
+    but how to write a given function as a power series. 
+    The answer to this question: 
+    any <dfn title="Has derivatives of all orders.">smooth</dfn> 
+    function \(f\) is equal to 
+    its <em>Taylor series</em> centered at \(x=a\)
+    \[f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n\]
+    for some interval of convergence centered at \(x=a\).
+    This to say any smooth function, 
+    on some interval, can be expressed as the limit 
+    of a convergent sequence of polynomial functions.
+</p>
+<ul>
+    <li>
+        <!-- SLO: Represent functions by power series, and vice versa -->
+        <h4>Skill</h4>
+        Given a smooth function and some point,
+        be able to write down the Taylor series 
+        that represents the function centered at that point,
+        and determine its interval of convergence.
+    </li>
+</ul>
+<p>
+    This ability to express any smooth function as a series
+    gives us a means of calculating approximations to the outputs 
+    of functions, like trigonometric or exponential/logarithmic functions,
+    that are otherwise difficult to calculate.
+    By truncating a Taylor series after the \(N\mathrm{th}\) term, 
+    we define the \(N\mathrm{th}\) <em>Taylor polynomial</em> 
+    (centered at \(x=a\)) of a function \(f\) as
+    \[T_N(x) = \sum_{n=0}^{N} \frac{f^{(n)}(a)}{n!}(x-a)^n\,,\]
+    and note that this polynomial approximates \(f\) around \(x=a\).
+    Being a polynomial it is much easier to calculate,
+    and the approximation improves as \(N \to \infty\).
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Understand how to quantify how well a 
+        smooth function is approximated by a Taylor polynomial
+        on some subset of its domain.
+        In particular, be familiar with <em>Taylor’s inequality</em>.
+    </li>
+</ul>
+<p>
+    This revelation that every smooth function,
+    nearly every function we’ve studied in a math class before,
+    is secretly the limit of polynomial functions (on some domain)
+    serves as the climax and conclusion of this course.
+</p>
 </section>
 
 </main>
