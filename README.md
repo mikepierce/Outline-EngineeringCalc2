@@ -13,14 +13,16 @@ The primary narrative follows
 
 ### Use this Outline
 
-  - **Clone it as a Template** – 
+  - **Promote it to Your Students** – 
+  Send your students a link to
+  [my instance of this outline](https://org.coloradomesa.edu/~mapierce2/136/).
+  Easy-peasy. Maybe they'll find something helpful.
+  Otherwise dive in yourself to find resources 
+  in the outline that your students would appreciate.
+
+  - **Fork/Clone it as a Template** – 
   If you're teaching a sufficiently similar class soon, 
-  especially if you're following the same textbook, 
+  especially if you're also following Stewart's *Calculus*,
   cloning this outline as an initial template 
   and editing it to fit your schedule/pacing/standards can save time.
-
-  - **Harvest the Resources** – 
-  I've curated the resources in this outline; there's some good stuff.
-  Look over the resources and see if you find something new,
-  or something worth sending to your students.
 
