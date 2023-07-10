@@ -37,7 +37,7 @@
     and occasional side-plots.
     This narrative overview, in its brevity, 
     serves to summarize the plot of this course
-    and to clarify our purpose,
+    and to clarify our purpose
     for the sake of keeping both student and instructor 
     focused on what’s important.
 </p>
@@ -51,16 +51,18 @@
     \(\ln(x)\) and \(\mathrm{e}^x\) from a new perspective.
 </p>
 <aside>
-    Note, the trigonometric functions sine, arctangent, etc,
+    Doing this now instead of much earlier in the course
+    is the reason our textbook is subtitled “late transcendentals”.
+    Note that the trigonometric functions sine, cosine, arctangent, etc,
     are <em>also</em> transcendental functions,
-    though the designers of most calculus textbooks subtitled “late transcendentals”
+    however the designers of most calculus textbook with this subtitle
     don’t appear to be bothered introducing them early.
 </aside>
 <p>
     We introduce these functions by <em>defining</em>
-    the (natural) logarithm function as a definite integral
+    the logarithm as a definite integral
     \[ \ln(x) = \int\limits_1^x \frac{1}{t}\,\mathrm{d}t\,, \]
-    and from there defining \(\mathrm{e}^x\) as its inverse.
+    and defining \(\mathrm{e}^x\) as its inverse.
     Starting from this perspective though,
     it becomes pertinent to figure out how the derivative 
     of the inverse of a function relates the function itself.
@@ -83,40 +85,133 @@
     We can get a lot of information from the inverse function theorem,
     not just about the derivative of \(\mathrm{e}^x\)
     and about exponential/logarithmic function of non-natural bases,
-    but also about the inverses of trigonometric functions.
+    but also about the derivatives of 
+    the inverses of trigonometric functions.
 </p>
+<p>
+    \[
+    \frac{\mathrm{d}}{\mathrm{d}x} \arcsin(x) = \frac{1}{\sqrt{1-x^2}}
+    \qquad \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x} \arccos(x) = -\frac{1}{\sqrt{1-x^2}}
+    \]
+    \[
+    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arcsec}(x) = \frac{1}{x\sqrt{x^2-1}}
+    \qquad \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arccsc}(x) = -\frac{1}{x\sqrt{x^2-1}}
+    \]
+    \[
+    \frac{\mathrm{d}}{\mathrm{d}x} \arctan(x) = \frac{1}{1+x^2}
+    \qquad \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{arccot}(x) = -\frac{1}{1+x^2}
+    \]
+</p>
+<p>
+    Now before moving on to a couple of calculus tricks 
+    that logarithms help us see,
+    there are a couple of <em>new</em> transcendental functions
+    we should add to our dictionary: the <em>hyperbolic functions</em>.
+</p>
+<p> 
+    \[
+    \newcommand{\ex}{\mathrm{e}}
+    \sinh(x) = \frac{\ex^x-\ex^{-x}}{2}
+    \qquad \qquad
+    \cosh(x) = \frac{\ex^x+\ex^{-x}}{2}
+    \]
+    \[
+    \mathrm{sech}(x) = \frac{1}{\cosh(x)}
+    \qquad \qquad
+    \mathrm{csch}(x) = \frac{1}{\sinh(x)}
+    \]
+    \[
+    \tanh(x) = \frac{\sinh(x)}{\cosh(x)}
+    \qquad \qquad
+    \coth(x) = \frac{1}{\tanh(x)}
+    \]
+</p>
+    We can use the representations for \(\sinh(x)\) and \(\cosh(x)\)
+    in terms of \(\mathrm{e}^x\) to calculate the derivatives
+    of all the hyperbolic functions, and begin exploring their antiderivatives.
+    Furthermore we can use the inverse function theorem to calculate 
+    the derivatives of the inverses of the hyperbolic functions.
+</p> 
+<p> 
+    \[
+    \frac{\mathrm{d}}{\mathrm{d}x} \sinh(x) = \cosh(x)
+    \qquad \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x} \cosh(x) = \sinh(x)
+    \]
+    \[
+    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{sech}(x) = -\mathrm{sech}(x)\tanh(x)
+    \qquad \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x} \mathrm{csch}(x) = -\mathrm{csch}(x)\coth(x)
+    \]
+    \[
+    \frac{\mathrm{d}}{\mathrm{d}x} \tanh(x) = \mathrm{sech}^2(x)
+    \qquad \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x} \coth(x) = -\mathrm{csch}^2(x)
+    \]
+</p>
+<p> 
+<!--
+<p> 
+    \[ \mathrm{arsinh}(x) = \ln\left(x+\sqrt{x^2+1}\right) \]
+    \[ \mathrm{arcosh}(x) = \ln\left(x+\sqrt{x^2-1}\right),\, x\geq 1 \]
+    \[ \mathrm{artanh}(x) = \frac{1}{2}\ln\left(\frac{1+x}{1-x}\right),\, |x| \lt 1 \]
+</p>
+-->
 <ul>
     <li>
-        <!-- SLO: Perform the Calculus of exponential, logarithmic, inverse trigonometric and hyperbolic functions -->
+        <!-- SLO: Perform the Calculus of exponential, logarithmic, 
+            inverse trigonometric and hyperbolic functions -->
         <h4>Fact</h4>
         <p>
         Know the derivatives and antiderivatives
-        of exponential, logarithmic, and inverse trigonometric functions.
+        of exponential, logarithmic, inverse trigonometric,
+        hyperbolic, and inverse hyperbolic functions.
         </p>
     </li>
     <li>
         <h4>Skill</h4>
         <p>
         Be able to calculate the derivative of 
-        any rational sum, product, or composite
-        of exponential or logarithmic functions of any base,
-        and of inverse trigonometric functions.
-        Also be able to calculate the antiderivative 
+        any rational sum or composite of
+        exponential or logarithmic functions of any base,
+        or of any trigonometric or hyperbolic functions.
+        Also be able to calculate the <em>anti</em>derivative 
         of any “simple” rational sum or composite
         of such functions.
         </p>
     </li>
 </ul>
+<ul>
+    <li>
+        <!-- SLO: Perform the Calculus of exponential, logarithmic, 
+            inverse trigonometric and hyperbolic functions -->
+        <h4>Fact</h4>
+        <p>
+        Know the definitions of the hyperbolic trigonometric functions:
+        what they are, how they relate to exponential functions,
+        and what their derivatives and antiderivatives are.
+        </p>
+    </li>
+</ul>
 <p>
-    Beyond that core narrative
-    we build two new tools 
-    with the help of logarithms.
+    With addition of these logarithmic, exponential, 
+    trigonometric, and hyperbolic functions,
+    the dictionary of differentiable functions
+    we’ve been building in this class is complete.
+    Beyond this core dictionary-building narrative 
+    there are two new tools/techniques 
+    we will manufacture with the help of logarithms:
+    <em>logarithmic differentiation</em> 
+    and <em>L’Hospital’s Rule</em>.
 </p>
 <ul>
     <li>
         <h4>Skill</h4>
         <p>
-        Know the technique of <em>logarithmic differentiation</em>,
+        Know the technique of logarithmic differentiation,
         and be able to calculate the derivative of functions of the form
         \(f(x)^{g(x)}\) for non-constant \(f\) and \(g\).
         Explicitly as a formula,
@@ -131,7 +226,7 @@
         <!-- SLO: Apply L’Hospital’s Rule to find limits of functions -->
         <h4>Skill</h4>
         <p>
-        Be able to apply <em>L’Hospital’s Rule</em> to evaluate limits:
+        Be able to apply L’Hospital’s Rule to evaluate limits:
         for suitable functions \(f\) and \(g\) such that either 
         \(\lim_{n\to a} f(x) = \lim_{n\to a} g(x) =0\)
         or \(\lim_{n\to a} f(x) = \lim_{n\to a} g(x) =\pm\infty\),
@@ -141,26 +236,8 @@
     </li>
 </ul>
 <p>
-    Before we conclude our exploration of transcendental functions,
-    there is one last sight we really should see,
-    just to be aware of.
-</p>
-<ul>
-    <li>
-        <h4>Fact</h4>
-        <p>
-        Be <em>familiar</em> with hyperbolic trigonometric functions:
-        what they are, how they relate to exponential functions,
-        and what their derivatives and antiderivatives look like.
-        </p>
-    </li>
-</ul>
-<p>
-    The addition of these logarithmic, exponential, 
-    trigonometric, and hyperbolic functions
-    completes the dictionary of differentiable functions
-    we’ve been building in this class,
-    and so we are now well-prepared to dive into 
+    Now with our dictionary complete and our toolbox buffed,
+    we are now well-prepared to dive into 
     the art and practice of evaluating integrals.
 </p>
 </section>
@@ -188,8 +265,12 @@
 </p>
 <p>
     With this tool we’ll finally be able to calculate 
-    formulas for the integrals of the functions 
-    \(\ln(x)\) and \(\sec(x)\)
+    formulas for the integrals of the functions \(\ln\) and \(\sec\),
+    \[
+    \int \ln(x) \,\mathrm{d}x = x\ln(x) - x +C
+    \qquad
+    \int \sec(x) \,\mathrm{d}x = \ln|\sec(x) + \tan(x)| +C\,,
+    \]
     and move on to learning the tricks for dealing with 
     more complicated trigonometric integrands.
     The “trick” is usually to cleverly wield 
@@ -204,7 +285,7 @@
     isn’t so much about integration
     as it is about writing a rational expression
     as a sum of polynomials and rational expression
-    with degree-1 or -2 denominators.
+    with degree-1 or degree-2 denominators.
     This sum is called its <em>partial fraction decomposition</em>,
     and is straightforward to integrate
     using previously learned techniques.
@@ -218,7 +299,25 @@
         <h4>Skill</h4>
         Be able to employ any of the previous tools/techniques
         to find formulas for indefinite integrals,
-        or to calculate values of definite integrals,
+        or to calculate formulas for definite integrals,
+    </li>
+</ul>
+<p>
+    Because calculating integrals can be such an arduous, creative task,
+    it’s commonly be held to be a good idea
+    to pre-compute many common antiderivative “templates”
+    and record them in a table for reference.
+</p>
+<ul>
+    <li>
+        <!-- SLO: Compute integrals by a variety of techniques, 
+            such has integration by parts, trigonometric substitution, 
+            partial fractions, using tables and technology; 
+            including improper integrals -->
+        <h4>Skill</h4>
+        Be able to calculate formulas for definite integrals
+        by pattern-matching an integrand
+        against a table of pre-computed antiderivatives.
     </li>
 </ul>
 <p>
@@ -286,7 +385,7 @@
         <h4>Skill</h4>
         Be able to navigate the nuances of improper integrals,
         compute their value if they converge,
-        and determining whether they converge or diverge
+        and determine whether they converge or diverge
         by comparing their integrands to simpler functions
         whose convergence/divergence is known.
     </li>
@@ -323,9 +422,121 @@
     </li>
 </ul>
 <p>
-    Then since we’re talking about applications of calculus anyways,
-    now is a good time to introduce the main character 
-    from the field of applied mathematics: the differential equation.
+    Next we’re going to dive into a topic 
+    that appears to be unrelated to calculus,
+    before discovering why it is that mathematicians 
+    appreciate polynomials so much.
+</p>
+</section>
+
+<section>
+<h2 id="series">Taylor Series</h2>
+<p>
+    Every function we’ve dealt with so far has been 
+    a real-valued functions with real inputs. 
+    This segment of the course pivots towards 
+    real-valued functions with positive integer inputs, <em>sequences</em>, 
+    with the goal of defining and exploring Taylor series.
+    One of the important questions we’ll want to answer about Taylor series
+    is when the sum of their coefficients, 
+    the <em>series</em> that their coefficients comprise, 
+    converges and sincerely defines a function,
+    so first we’ll spend some time studying the convergence of series.
+</p>
+<ul>
+    <li>
+        <!-- SLO: Test series for convergence by a variety of tests -->
+        <h4>Skill</h4>
+        Know what it means for a series to <em>converge absolutely</em>,
+        to <em>converge conditionally</em>, and to diverge,
+        and how to determine a series’ convergence using various tests.
+    </li>
+    <li>
+        <!-- SLO: Compute limits of sequences and series -->
+        <h4>Skill</h4>
+        Be able to compute the limit/value 
+        of certain convergent sequences and series
+        (e.g. geometric series).
+    </li>
+</ul>
+<p>
+    Once we’re trained to tell when a series converges,
+    we can apply this skill to decide where one defines a function.
+    The series \(\sum_{n=0}^{\infty} c_n(x-a)^n\)
+    is called <em>power series</em> centered at \(x=a\),
+    and can be thought of a polynomial with infinitely many terms.
+    A power series defines a function 
+    on some <em>interval of convergence</em> centered at \(x=a\)
+    consisting of all \(x\) for which 
+    the power series \(\sum c_n(x-a)^n\) converges.
+    This interval then serves as the domain of the function 
+    \(f(x) = \sum c_n(x-a)^n\).
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Know how to calculate the interval of convergence
+        and <em>radius of convergence</em> of a power series.
+    </li>
+</ul>
+<p>
+    We must also consider the opposite question,
+    not when a power series describes a function,
+    but how to write a given function as a power series. 
+    The answer to this question: 
+    any <dfn title="Has derivatives of all orders.">smooth</dfn> 
+    function \(f\) is equal to 
+    its <em>Taylor series</em> centered at \(x=a\)
+    \[f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n\]
+    for some interval of convergence centered at \(x=a\).
+    This to say any smooth function, 
+    on some interval, can be expressed as the limit 
+    of a convergent sequence of polynomial functions.
+</p>
+<ul>
+    <li>
+        <!-- SLO: Represent functions by power series, and vice versa -->
+        <h4>Skill</h4>
+        Given a smooth function and some point,
+        be able to write down the Taylor series 
+        that represents the function centered at that point,
+        and determine its interval of convergence.
+    </li>
+</ul>
+<p>
+    This ability to express any smooth function as a series
+    gives us a means of calculating approximations to the outputs 
+    of functions, like trigonometric or exponential/logarithmic functions,
+    that are otherwise difficult to calculate.
+    By truncating a Taylor series after the \(N\mathrm{th}\) term, 
+    we define the \(N\mathrm{th}\) <em>Taylor polynomial</em> 
+    (centered at \(x=a\)) of a function \(f\) as
+    \[T_N(x) = \sum_{n=0}^{N} \frac{f^{(n)}(a)}{n!}(x-a)^n\,,\]
+    and note that this polynomial approximates \(f\) around \(x=a\).
+    Being a polynomial it is much easier to calculate,
+    and the approximation improves as \(N \to \infty\).
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Understand how to quantify how well a 
+        smooth function is approximated by a Taylor polynomial
+        on some subset of its domain.
+        In particular, be familiar with <em>Taylor’s inequality</em>.
+    </li>
+</ul>
+<p>
+    This revelation that every smooth function,
+    nearly every function we’ve studied in a math class before,
+    is secretly the limit of polynomial functions (on some domain)
+    morally serves as the climax and conclusion of this course.
+    However the curriculum demands me learn more!
+    We’ll wrap up this course by previewing two topics that each serve
+    as the focus of their own college courses.
+    First we’ll introduce the main antagonist 
+    from the field of applied mathematics, the differential equation.
+    Then we’ll get some practice thinking about calculus
+    beyond the scope of functions and their graphs rectangular space.
 </p>
 </section>
 
@@ -467,110 +678,6 @@
     We could describe curves in polar space parametrically too,
     as the set of all points \(\big(r(t), \theta(t)\big)\) 
     for some parameter \(t\), … but I’ve never heard anyone talk about this.
-</p>
-</section>
-
-<section>
-<h2 id="series">Taylor Series</h2>
-<p>
-    Every function we’ve dealt with so far has been 
-    a real-valued functions with real inputs. 
-    This last segment of the course pivots towards 
-    real-valued functions with positive integer inputs, <em>sequences</em>, 
-    with the goal of defining and exploring Taylor series.
-    One of the important questions we’ll want to answer about Taylor series
-    is when the sum of their coefficients, 
-    the <em>series</em> that their coefficients comprise, 
-    converges and sincerely defines a function,
-    so first we’ll spend some time studying the convergence of series.
-</p>
-<ul>
-    <li>
-        <!-- SLO: Test series for convergence by a variety of tests -->
-        <h4>Skill</h4>
-        Know what it means for a series to <em>converge absolutely</em>,
-        to <em>converge conditionally</em>, and to diverge,
-        and how to determine a series’ convergence using various tests.
-    </li>
-    <li>
-        <!-- SLO: Compute limits of sequences and series -->
-        <h4>Skill</h4>
-        Be able to compute the limit/value 
-        of certain convergent sequences and series
-        (e.g. geometric series).
-    </li>
-</ul>
-<p>
-    Once we’re trained to tell when a series converges,
-    we can apply this skill to decide where one defines a function.
-    The series \(\sum_{n=0}^{\infty} c_n(x-a)^n\)
-    is called <em>power series</em> centered at \(x=a\),
-    and can be thought of a polynomial with infinitely many terms.
-    A power series defines a function 
-    on some <em>interval of convergence</em> centered at \(x=a\)
-    consisting of all \(x\) for which 
-    the power series \(\sum c_n(x-a)^n\) converges.
-    This interval then serves as the domain of the function 
-    \(f(x) = \sum c_n(x-a)^n\).
-</p>
-<ul>
-    <li>
-        <h4>Skill</h4>
-        Know how to calculate the interval of convergence
-        and <em>radius of convergence</em> of a power series.
-    </li>
-</ul>
-<p>
-    We must also consider the opposite question,
-    not when a power series describes a function,
-    but how to write a given function as a power series. 
-    The answer to this question: 
-    any <dfn title="Has derivatives of all orders.">smooth</dfn> 
-    function \(f\) is equal to 
-    its <em>Taylor series</em> centered at \(x=a\)
-    \[f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n\]
-    for some interval of convergence centered at \(x=a\).
-    This to say any smooth function, 
-    on some interval, can be expressed as the limit 
-    of a convergent sequence of polynomial functions.
-</p>
-<ul>
-    <li>
-        <!-- SLO: Represent functions by power series, and vice versa -->
-        <h4>Skill</h4>
-        Given a smooth function and some point,
-        be able to write down the Taylor series 
-        that represents the function centered at that point,
-        and determine its interval of convergence.
-    </li>
-</ul>
-<p>
-    This ability to express any smooth function as a series
-    gives us a means of calculating approximations to the outputs 
-    of functions, like trigonometric or exponential/logarithmic functions,
-    that are otherwise difficult to calculate.
-    By truncating a Taylor series after the \(N\mathrm{th}\) term, 
-    we define the \(N\mathrm{th}\) <em>Taylor polynomial</em> 
-    (centered at \(x=a\)) of a function \(f\) as
-    \[T_N(x) = \sum_{n=0}^{N} \frac{f^{(n)}(a)}{n!}(x-a)^n\,,\]
-    and note that this polynomial approximates \(f\) around \(x=a\).
-    Being a polynomial it is much easier to calculate,
-    and the approximation improves as \(N \to \infty\).
-</p>
-<ul>
-    <li>
-        <h4>Skill</h4>
-        Understand how to quantify how well a 
-        smooth function is approximated by a Taylor polynomial
-        on some subset of its domain.
-        In particular, be familiar with <em>Taylor’s inequality</em>.
-    </li>
-</ul>
-<p>
-    This revelation that every smooth function,
-    nearly every function we’ve studied in a math class before,
-    is secretly the limit of polynomial functions (on some domain)
-    serves as the climax and conclusion of this course.
 </p>
 </section>
 
