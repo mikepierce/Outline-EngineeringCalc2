@@ -16,7 +16,7 @@ Chapters enumerated with § refer to
 ### How You Might Use this Outline
 
   - **Harvest it for Resources** – 
-If you're teaching a course titled "College Algebra" too,
+If you're teaching a similar course,
 there's likely overlap between the curriculum of your course and this one.
 Peruse [my instance of this outline](https://org.coloradomesa.edu/~mapierce2/136/),
 and look for any resources your students would appreciate.
