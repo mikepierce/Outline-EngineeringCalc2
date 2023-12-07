@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 Taylor and Maclaurin Series | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Taylor &amp; Maclaurin Series</h1>
+</header>
+
+<main>
+<blockquote>
+    \[
+    \sum_{n=0}^{\infty} \frac{f^{(n)}(0)}{n!}x^n
+    \qquad \qquad \qquad
+    \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n
+    \]
+</blockquote>
+<ol>
+    <li>
+        Calculate the MacLaurin series 
+        for the exponential function \(f(x) = \mathrm{e}^x.\)
+        Then notice that by evaluating this series at \(x=1,\)
+        we have a novel series for the constant \(\mathrm{e}.\)
+    </li>
+    <li>
+        We already knew <em>a</em> series for \(f(x) = \frac{1}{1-x}\) 
+        because we recognized it as a geometric series.
+        However we should verify that this series 
+        \[1+ x+x^2+x^3+x^4+x^5+\dotsb\]
+        is, in fact, the Maclaurin series for \(f(x) = \frac{1}{1-x}\) 
+        manually, using the formula.
+    </li>
+    <li>
+        By altering the Taylor series
+        \[\frac{1}{1-x} = 1+ x+x^2+x^3+x^4+x^5+\dotsb\,,\]
+        find power series representations for the following functions:
+        \[
+            a(x) = \frac{1}{1-4x^2}
+            \qquad \qquad
+            b(x) = \frac{2}{3-x}
+            \qquad \qquad
+            c(x) = \frac{1}{1+x}
+        \]
+        \[
+            f(x) = \ln|1+x|
+            \qquad \qquad \qquad
+            g(x) = \frac{x}{(1-9x)^2}
+        \]
+        \[ h(x) = x^2\arctan\left(x^3\right) \]
+        What are the radii of convergence of these functions?
+    </li>
+    <li>
+        Find the MacLaurin series for sine and cosine,
+        and their respective radii of convergence.
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 Approximate (Numerical) Integration | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Approximate (Numerical) Integration</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        Suppose that both the <kbd>ln</kbd> and <kbd>log</kbd> buttons
+        have fallen off your calculator, 
+        but you desperately need to compute 
+        a decimal approximation of \(\ln(4)\).
+        <ol>
+            <li>
+                First recall that the \(\ln\) function
+                is <em>defined</em> in terms of an integral.
+                Write down the definite integral that equals \(\ln(4)\).
+            </li>
+            <li>
+                Use the <em>midpoint rule</em> to estimate
+                the value of \(\ln(4)\) with six equal subintervals.
+                Then use the <em>trapezoid rule</em> to estimate \(\ln(4)\),
+                and then use <em>Simpson’s rule</em>.
+                How much better does each approximation get?
+            </li>
+            <li class="hard">
+                Can you write a computer program to approximate
+                the decimal presentation of \(\ln(4)\)?
+                As a reference, to check your program,
+                past mathematicians have computed
+                \[\ln(4) \approx 1.3862943611198906188344642429163531361510002687\,.\]
+            </li>
+        </ol>
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

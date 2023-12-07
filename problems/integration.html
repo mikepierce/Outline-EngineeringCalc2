@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Math136 Calculating Integrals | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>The Art and Practice <br>of Calculating Integrals</h1>
+</header>
+
+<main>
+<!--
+<p>
+    Remember that you can use 
+    <a href="https://www.wolframalpha.com">WolframAlpha</a>
+    to compute indefinite integrals.
+    Note that your final calculation 
+    and WolframAlpha’s may appear different,
+    but actually be equivalent expressions.
+    figuring out if your answer and WolframAlpha’s agree
+    can be an healthy exercise itself.
+</p>
+-->
+<ol>
+    <li>
+        First, before writing anything down,
+        look over each of the following integrals 
+        and decide if doing a <em>substitution</em>
+        or if taking the integral <em>by parts</em>
+        is a better first idea.
+        Note that there is no <em>correct</em> decision —
+        maybe one decision is better,
+        and maybe neither option works very well.
+        Consider whether knowing a previous integral helps.
+        Then after you’ve looked over all of them, 
+        <em>try</em> evaluating each one 
+        to see if your choice was a good one,
+        or if the integral is tougher than it appears.
+        \[
+        \int \sin(x)\cos(x) \,\mathrm{d}x
+        \qquad
+        \int x\sin(x)\cos(x) \,\mathrm{d}x
+        \qquad
+        \int x\sin\!\left(x^2\right)\cos\!\left(x^2\right) \,\mathrm{d}x
+        \]
+        \[
+        \int x\cos\!\left(x\right) \,\mathrm{d}x
+        \qquad
+        \int x\cos\!\left(x^2\right) \,\mathrm{d}x
+        \qquad % not expressible in terms of elementary functions
+        \int x^2\cos\!\left(x^2\right) \,\mathrm{d}x
+        \qquad
+        \int x^3\cos\!\left(x^2\right) \,\mathrm{d}x
+        \]
+        \[
+        \int \frac{1}{x}\cos\!\left(\ln(x)\right) \,\mathrm{d}x
+        \qquad
+        \int x\ln(x) \,\mathrm{d}x
+        \qquad
+        \int \cos\!\left(\ln(x)\right) \,\mathrm{d}x
+        \qquad
+        \int x\cos\!\left(\ln(x)\right) \,\mathrm{d}x
+        \]
+    </li>
+    <li>
+        Write down a formula for the integral
+        \[ \int x^n\cos(x) \,\mathrm{d}x \]
+        where \(n\) is an arbitrary positive integer.
+        If this task feels overwhelming, start computing the integral
+        for some specific large value of \(n\), say \(n=10\),
+        and see if you notice the pattern.
+        If you don’t see it, 
+        or if this exercise feels too much like a slog,
+        search the internet for the “tabular method of integration”.
+    </li>
+    <li>
+        Demonstrate how to evaluate the following integrals.
+        Hint: you must deftly wield some trigonometric identities.
+        \[ 
+        \int \sin^3(x)\cos^6(x)\,\mathrm{d}x
+        \qquad
+        \int \sin^6(x)\cos^3(x)\,\mathrm{d}x
+        \qquad
+        \int \sin^4(x)\cos^4(x)\,\mathrm{d}x
+        \] 
+        \[ 
+        \int \sec^3(x)\tan^3(x)\,\mathrm{d}x
+        \qquad
+        \int \sec^4(x)\tan^4(x)\,\mathrm{d}x
+        \qquad
+        \int \sec^3(x)\tan^4(x)\,\mathrm{d}x
+        \] 
+    </li>
+    <li>
+        Demonstrate how to evaluate the following integrals.
+        Hint: each one is begging you to make a trigonometric substitution.
+        \[
+            \int \frac{\sqrt{x^2+1}}{x} \,\mathrm{d}x
+            \qquad
+            \int x\sqrt{x^2+144} \;\mathrm{d}x
+            \qquad
+            \int \sqrt{x^2+12x+85} \;\mathrm{d}x
+        \]
+        \[
+            \int \frac{\sqrt{x^2-9}}{x^4} \,\mathrm{d}x
+            \qquad
+            \int \frac{\mathrm{d}x}{x\sqrt{7-x^2}}
+            \qquad
+            \int \sqrt{1-144x^2} \;\mathrm{d}x
+        \]
+        \[
+            \int\limits_{\sqrt{2}}^{2} \frac{\mathrm{d}x}{x^3\sqrt{x^2-1}}
+            \qquad
+            \int\limits_{\sqrt{0}}^{7} x^3\sqrt{x^2+49} \;\mathrm{d}x
+            \qquad
+            \int\limits_{\sqrt{0}}^{1} \sqrt{x^2+1} \;\mathrm{d}x
+        \]
+    </li>
+    <li>
+        Demonstrate how to evaluate the following integrals.
+        Hints: remember which functions 
+        have antiderivative \(\ln\) and \(\arctan\),
+        remember that integrals break up across sums,
+        and remember the technique of <em>completing-the-square</em>.
+        \[
+            \int \frac{x}{x+49} \,\mathrm{d}x
+            \qquad
+            \int \frac{1}{x+49} \,\mathrm{d}x
+            \qquad
+            \int \frac{x+1}{x+49} \,\mathrm{d}x
+            \qquad
+            \int \frac{x^2+1}{x+49} \,\mathrm{d}x
+        \]
+        \[
+            \int \frac{x}{x^2+49} \,\mathrm{d}x
+            \qquad
+            \int \frac{1}{x^2+49} \,\mathrm{d}x
+            \qquad
+            \int \frac{x+1}{x^2+49} \,\mathrm{d}x
+            \qquad
+            \int \frac{x^2+1}{x^2+49} \,\mathrm{d}x
+        \]
+        \[
+            \int \frac{x}{x^2 + 12x + 85} \,\mathrm{d}x
+            \qquad
+            \int \frac{1}{x^2 + 12x + 85} \,\mathrm{d}x
+            \qquad
+            \int \frac{x+1}{x^2 + 12x + 85} \,\mathrm{d}x
+        \]
+        <!--
+        \[
+            \int \frac{Ax+B}{Rx^2 + Sx + T} \,\mathrm{d}x
+        \]
+        -->
+    </li>
+    <li>
+        Demonstrate how to evaluate each these integrals
+        of a rational function.
+        \[
+            \int \frac{x - 13}{x^2 + 4x - 21} \,\mathrm{d}x
+            \qquad
+            \int \frac{5x^2 + x - 13}{(x-3)\big(x^2 + 4x - 21\big)} \,\mathrm{d}x
+        \]
+        \[
+            \int \frac{10x^2 + x - 13}{(x-3)\big(x^2 + 7\big)} \,\mathrm{d}x
+            \qquad
+            \int \frac{x^3 + 9x^2 - 108}{x^2 + 4x - 21} \,\mathrm{d}x
+        \]
+    </li>
+    <!--
+    <li>
+        <h4 class="screen">Spivak</h4> 
+        Demonstrate how to evaluate the following integrals.
+        \[
+            \int \frac{2x^2+7x+1}{x^3+x^2-x-1} \,\mathrm{d}x
+            \qquad
+            \int \frac{2x+1}{x^3-3x^2+3x-1} \,\mathrm{d}x
+        \]
+        \[
+            \int \frac{x^3+7x^2-5x+5}{(x-1)^2(x+1)^3} \,\mathrm{d}x
+        \]
+    </li>
+    -->
+    <li>
+        You know that
+        \[ \int \frac{\mathrm{d}x}{x^2+1} = \arctan(x) + C \,.\]
+        But notice that \(x^2+1\) factors as 
+        \((x+\mathbf{i})(x-\mathbf{i})\), where \(\mathbf{i}^2 = 1\).
+        Have no fear, \(\mathbf{i}\) is just like any other number.
+        Use this fact to integrate \(1/(x^2+1)\) 
+        via its partial-fraction decomposition,
+        thereby obtaining a formula for \(\arctan(x)\)
+        in terms of logarithms of complex numbers.
+    </li>
+    <li>
+        This is a collection of integrals 
+        that can be evaluating using some combination of 
+        the elementary techniques discussed in our class.
+        Evaluate them.
+        \[
+            \int \sqrt{x}\ln(x) \,\mathrm{d}x
+            % by-parts
+                \qquad \qquad
+            \int x\sec(x)\tan(x) \,\mathrm{d}x
+            % by-parts
+                \qquad \qquad
+            \int \frac{\mathrm{e}^x}{1 + \mathrm{e}^{2x}} \,\mathrm{d}x
+            % substitution, arctan
+        \]
+        \[
+            \int \frac{\sin\left(\frac{1}{x}\right)}{x^3} \,\mathrm{d}x
+            % 
+                \qquad \qquad
+            \int \arctan(\sqrt{x}) \,\mathrm{d}x
+            % 
+                \qquad \qquad
+            \int \frac{\sin(x)}{1+\cos(x)}  \,\mathrm{d}x
+            % 
+        \]
+        \[
+            \int \frac{x^3}{x^4-1} \,\mathrm{d}x
+            % sub
+                \qquad \qquad
+            \int \frac{x^5}{x^4-1} \,\mathrm{d}x
+            % division, partial-frac
+                \qquad \qquad
+            \int \frac{x^4-1}{x^5} \,\mathrm{d}x
+            % elementary
+        \]
+    <!--
+        \[
+            \int TK \,\mathrm{d}x
+            % 
+                \qquad \qquad
+            \int TK \,\mathrm{d}x
+            % 
+                \qquad \qquad
+            \int TK  \,\mathrm{d}x
+            % 
+        \]
+        -->
+    </li>
+    <li>
+        Suppose that both the <kbd>ln</kbd> and <kbd>log</kbd> buttons
+        have fallen off your calculator, 
+        but you desperately need to compute 
+        a decimal approximation of \(\ln(4)\).
+        <ol>
+            <li>
+                First recall that the \(\ln\) function
+                is <em>defined</em> in terms of an integral.
+                Write down the definite integral that equals \(\ln(4)\).
+            </li>
+            <li>
+                Use the <em>midpoint rule</em> to estimate
+                the value of \(\ln(4)\) with six equal subintervals.
+                Then use the <em>trapezoid rule</em> to estimate \(\ln(4)\),
+                and then use <em>Simpson’s rule</em>.
+                How much better does each approximation get?
+            </li>
+            <li class="hard">
+                Can you write a computer program to approximate
+                the decimal presentation of \(\ln(4)\)?
+                As a reference, to check your program,
+                past mathematicians have computed
+                \[\ln(4) \approx 1.3862943611198906188344642429163531361510002687\,.\]
+            </li>
+        </ol>
+    </li>
+    <li>
+        Each of the following integrals are <em>improper</em>.
+        For each integral, first identify why it’s improper.
+        Then, looking at the integrand, predict whether the integral
+        will be be convergent or divergent:
+        compare it to previous integrals you’ve evaluated,
+        and practice building your intuition on this.
+        Then get to work evaluating the integral if it’s convergent,
+        or otherwise showing it’s divergent.
+        Note that if it’s divergent you can save time 
+        by comparing it to an integral you already know is divergent.
+        \[
+            \int\limits_{0}^{\pi/2} \tan(x) \,\mathrm{d}x
+            \qquad
+            \int\limits_{1}^{11} \frac{1}{x^2+34x-111} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\infty} x\mathrm{e}^{-3x} \,\mathrm{d}x
+            \qquad
+            \int\limits_{2}^{3} \frac{1}{\sqrt{3-x}} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{444}^{\infty} \frac{1}{(x-10000)^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_{444}^{\infty} \frac{1}{(x^2-10000)^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{1} \frac{\ln(x)}{x} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{1} \frac{\ln(x)}{\sqrt{x}} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{-\infty}^{\infty} \frac{1}{x^4}-x^4 \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\infty} \sin(x)\mathrm{e}^{\cos(x)} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{1} \frac{\mathrm{e}^{1/x}}{x^4} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\infty} \frac{\mathrm{e}^x}{\mathrm{e}^{2x}+3} \,\mathrm{d}x
+        \]
+    </li>
+    <li>
+        For \(R \gt 1\), define the function 
+        \[A(R) = \int\limits_1^R \frac{1}{x^{p}} \,\mathrm{d}x\]
+        <ol>
+            <li>
+            Show that if \(p=1\), then \(A(R) = \ln|z|\),
+            but for \(p\neq 1\), we instead have 
+            \[ A(R) = \frac{1}{1-p}\left(R^{1-p}-1\right)\,.  \]
+            </li>
+            <li>
+            Show that if \(0 \lt p \leq 1\),
+            then \(\lim\limits_{R \to \infty} A(R) = \infty\).
+            </li>
+            <li>
+            Show that if \(p \gt 1\),
+            then \(\lim\limits_{R \to \infty} A(R) = \frac{1}{p-1}\).
+            </li>
+        </ol>
+        Look out for the vocabulary term \(p\)-<em>series</em>
+		later in the course, and remember this exercise when you see it.
+    </li>
+    <li>
+        Draw a picture of the region between the curves \(y = \ln(x)\) and
+        \(y = \ln\left(x^2\right)\) in the lower half-plane. 
+        Is the area of this region finite?
+        If it is, what’s its area? If not how do you know?
+        Write down an integral that represents the volume of the solid
+        formed by rotating this region about the \(y\)-axis.
+        Is the volume of this solid finite?
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        <h4 class="screen">Spivak (mostly)</h4>
+        Demonstrate how to evaluate the following integrals.
+        \[
+            \int \frac{\arctan(x)}{1+x^2} \,\mathrm{d}x
+            \qquad
+            \int \frac{x\arctan(x)}{(1+x^2)^3} \,\mathrm{d}x
+            \qquad
+            \int \ln\big(\sqrt{1+x^2}\big) \,\mathrm{d}x
+        \]
+        \[
+            \int x\ln\big(\sqrt{1+x^2}\big) \,\mathrm{d}x
+            \qquad
+            \int \frac{x^2-1}{x^2+1}\cdot\frac{1}{\sqrt{1+x^4}} \,\mathrm{d}x
+            \qquad
+            \int \arcsin\!\big(\sqrt{x}\big) \,\mathrm{d}x
+        \]
+        \[
+            \int \frac{x}{1+\sin(x)} \,\mathrm{d}x
+            \qquad
+            \int \mathrm{e}^{\sin{x}} \cdot \frac{x\cos^3(x)-\sin(x)}{\cos^2(x)} \,\mathrm{d}x
+            \qquad
+            \int \frac{\mathrm{d}\theta}{1-\sin^4(\theta)} 
+        \]
+        \[
+            \int \sqrt{\tan(x)} \,\mathrm{d}x
+            \qquad
+            \int \frac{\mathrm{d}x}{\sqrt{1+\mathrm{e}^{2x}}} 
+            \qquad
+            \int \ln\left(\mu + \sqrt{1-\mu}\right)\,\mathrm{d}\mu 
+        \]
+    </li>
+    <li>
+        For which values of \(p\) do these integrals converge?
+        For those values of \(p\) what do these integrals converge to?
+        \[
+            \int\limits_{0}^{1} \frac{\ln(x)}{x^p} \,\mathrm{d}x
+            \qquad \qquad
+            \int\limits_{\mathrm{e}}^{\infty} \frac{1}{x\big(\ln(x)\big)^p} \,\mathrm{d}x
+        \]
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ecet_cp_05_stu.pdf">James Stewart</a></h4>
+        Find the interval \([a,b]\) 
+        for which the value of this integral is maximal:
+        \[\int\limits_a^b (2 + x - x^2) \,\mathrm{d}x\]
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ecet_cp_05_stu.pdf">James Stewart</a></h4>
+        If \(f\) is a differentiable function such that
+        \(\int_0^x f(t) \,\mathrm{d}t = \big(f(x)\big)^2\) for all \(x\), 
+        find a formula for \(f\).
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ecet_cp_05_stu.pdf">James Stewart</a></h4>
+        Consider a square of side-length two,
+        and consider the region consisting of all points in the square
+        that are closer to the center of the square 
+        than to any side of the square.
+        What is the area of this region?
+    </li>
+    <li class="screen">
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_06_stu.pdf">James Stewart</a></h4>
+        Evaluate \(\int \frac{\mathrm{d}x}{x^7-x}\).
+        The straightforward approach would be to start 
+        with partial fractions, but that would be brutal. 
+        Try a substitution.
+    </li>
+    <li class="screen">
+        <h4><a href="math.stackexchange.com/q/2060187">The “Sub x for its Reciprocal” Trick</a></h4>
+        Show that the integral
+        \[ \int\limits_{0}^{\infty} \frac{\ln(x)}{1+x^2} \,\mathrm{d}x \]
+        evaluates to zero by breaking up its domain of integration into two parts
+        based on where the integrand is negative or positive,
+        and using the substitution \(x \leftrightarrow \frac{1}{x}\)
+        on one of those parts.
+        Then use this same trick to show that the value of the following
+        integral doesn’t depend at all on the value of the real number \(p\).
+        \[ \int\limits_{0}^{\pi/2} \frac{\mathrm{d}\theta}{1+\big(\tan(\theta)\big)^p} \]
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_06_stu.pdf">James Stewart</a></h4>
+        Evaluate
+        \(\int_0^1 \sqrt[3]{1-x^7} - \sqrt[7]{1-x^3} \,\mathrm{d}x\,.\)
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/ESSENTIAL%20CALCULUS%20Early%20Transcendentals/upfiles/challenge/ess_cp_06_stu.pdf">James Stewart</a></h4>
+        If \(n\) is a positive integer, prove that
+        \[\int\limits_0^1 \big(\ln(x)\big)^n \,\mathrm{d}x = (-1)^n n!\,.\]
+    </li>
+    <li class="hard">
+        <h4>Putnam</h4>
+        Evaluate these integrals.
+        \[
+            \int\limits_0^1 \frac{\ln(x+1)}{1+x^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_2^4 \frac{\sqrt{\ln(9-x)}}{\sqrt{\ln(9-x)}+\sqrt{\ln(x+3)}} \,\mathrm{d}x
+        \]
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

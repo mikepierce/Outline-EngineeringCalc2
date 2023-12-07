@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 Separable Differential Equations | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Separable Differential Equations</h1>
+</header>
+
+<main>
+<blockquote>
+    Given a <em>separable</em> differential equation, 
+    find an <em>implicit</em> formula for the <em>general solution</em> to that equation.
+    If possible, arrange that formula into an <em>explicit</em> solution.
+    Given <em>initial conditions</em> on a solution, 
+    find the (implicit or explicit) formula 
+    for the <em>particular solution</em> corresponding to those conditions.
+</blockquote>
+<ol>
+    <li>
+        Consider the differential equation \(\dot{y} = 6y^2t\,.\)
+        <ol>
+            <li>
+                Solve this differential equation.
+            </li>
+            <li>
+                Solve this differential equation
+                subject to the condition 
+                that \(y = \frac{1}{9}\) when \(t=1\,.\)
+            </li>
+        </ol>
+    </li>
+    <li>
+        Solve the <em>initial value problem</em>:
+        What is a formula \(y = f(t)\) for 
+        \[\dot{y} = \frac{\mathrm{e}^t}{y} \quad\text{subject to}\quad f(0)=1\,?\]
+    </li>
+    <li>
+        Given that \(y=2\mathrm{e}\) when \(t = 3,\)
+        find an <em>explicit</em> particular solution 
+        to the differential equation
+        \[ \frac{y'}{x} = \mathrm{e}^{x-\ln\left(y^2\right)} \,.  \]
+    </li>
+    <li>
+        Find a general solution to each of the following differential equations.
+        If possible, arrange the solution into an explicit formula \(y = f(t).\)
+        <figure>
+            <div> \[ \dot y = t\mathrm{e}^{t^2-\ln\left(y^2\right)}\] </div>
+            <div> \[ t^2\dot y = \sec(y) - \dot y \] </div>
+            <div> \[ \sin^2(y)\dot y = (1-\dot y)\cos^2(y) \] </div>
+            <div> \[ t\dot y = \sqrt{t^2 - (ty)^2} \] </div>
+            <div> \[ y\dot{y} + y^2 = 3ty\dot{y}+1 \] </div>
+            <div> \[ \dot{y}\cot^2(t) + \tan(y) = 0 \] </div>
+            <div> \[ t\dot{y} - 27\dot{y} = 3(y-9) \] </div>
+            <div> \[ (ty)^2+2y^2 + \dot{y} = 0 \] </div>
+            <div> \[ 2\cos(t) = 3t^2-\dot{y} \] </div>
+            <div> \[ \dot{y}-6y = 4 \] </div>
+            <div> \[ t\dot{y} - 2\dot{y} = 2(y-4) \] </div>
+        </figure>
+    </li>
+    <li>
+        Find the particular solution to each of the following differential equations
+        corresponding to the given initial conditions.
+        If possible, arrange the solution into an explicit formula \(y = f(t).\)
+        <figure>
+            <div>\[ \frac{1}{t}\sec^2(y)\dot{y} = 1 \quad\text{subject to}\quad y=1 \text{ when } t=0 \]</div>
+            <div>\[ \mathrm{e}^t - y\dot{y} = 0 \quad\text{subject to}\quad y=3 \text{ when } t=0 \]</div>
+            <div>\[ \ddot{y} =  t^2 + 3 \quad\text{where}\quad y=-4 \text{ and } \dot{y}=2 \text{ when } t=0 \]</div>
+        </figure>
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

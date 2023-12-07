@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 Natural Exponentials | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Natural Exponentials</h1>
+</header>
+<main>
+<blockquote>
+    \[
+    \mathrm{e}^x = \exp(x) = \ln^{-1}(x)
+    \qquad
+    \int\limits \mathrm{e}^x\,\mathrm{d}x = \mathrm{e}^x + C
+    \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x}\mathrm{e}^x = \mathrm{e}^x
+    \]
+</blockquote>
+<ol>
+    <li>
+        Calculate the derivatives of the following functions explicitly:
+        \[ \newcommand{\ex}{{\mathrm{e}}}
+        f(x) = \ex^{5x^2+1}
+        \qquad
+        g(x) = 3\left(\ex^x+1\right)^2
+        \qquad
+        h(x) = {\tan(\ex^x)}
+        \]
+    </li>
+    <li>
+        Calculate the following integrals explicitly:
+        \[\newcommand{\ex}{\mathrm{e}}
+        \int \left(\ex^{5x} + \pi\right) \,\mathrm{d}x
+        \qquad
+        \int 10x^4\ex^{x^5} \,\mathrm{d}x
+        \qquad
+        \int \ex^x\cos(\ex^x) \,\mathrm{d}x
+        \]
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

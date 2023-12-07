@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 Improper Integrals | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Improper Integrals</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        Each of these integrals are <em>improper</em>.
+        Identify what makes each one improper, 
+        and decide if each integral converges or diverges.
+        If it converges, compute its value.
+        \[
+            \int\limits_{1}^{\infty} \frac{\mathrm{d}x}{x^5} 
+            \qquad
+            \int\limits_{1}^{\infty} \frac{\mathrm{d}x}{\sqrt{x}}
+            \qquad
+            \int\limits_{0}^{\infty} \mathrm{e}^{-x} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{0}^{1} \frac{\mathrm{d}x}{x^5} 
+            \qquad
+            \int\limits_{0}^{1} \frac{\mathrm{d}x}{\sqrt{x}}
+            \qquad
+            \int\limits_{-\infty}^{0} \mathrm{e}^{-x} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{0}^{1} \ln(x) \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{3} \frac{1}{x^2-1} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\pi/2} \sec(x) \,\mathrm{d}x
+        \]
+    </li>
+    <li>
+        Determine whether each of the following integrals
+        converges or diverges.
+        \[
+            \int\limits_{1}^{\infty} \frac{1+\cos^2(x)}{\sqrt[3]{x}} \,\mathrm{d}x
+            \qquad
+            \int\limits_{13}^{\infty} \frac{x+43}{x^2-144} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\infty} \frac{\arctan(5x)}{x^2+3x+7} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{1}^{\infty} \frac{1}{x}\mathrm{e}^{-x} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{3} \frac{x+1}{x-1} \,\mathrm{d}x
+            \qquad
+            \int\limits_{1}^{\infty} \frac{x+11}{\sqrt{x^5-x^2}} \,\mathrm{d}x
+            \qquad
+            \int\limits_{1}^{\infty} \frac{x-2}{x^3+125} \,\mathrm{d}x
+        \]
+    </li>
+    <!--
+    <li>
+        Decide if each of the following integrals 
+        is convergent or divergent.
+        For solutions see
+        <a href="https://tutorial.math.lamar.edu/Classes/CalcII/ImproperIntegralsCompTest.aspx">Paul’s Online Math Notes</a>.
+        \[
+            \int\limits_{2}^{\infty} \frac{\cos^2(x)}{x^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_{3}^{\infty} \frac{1}{x+\mathrm{e}^x} \,\mathrm{d}x
+            \qquad
+            \int\limits_{3}^{\infty} \frac{1}{x-\mathrm{e}^{-x}} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{1}^{\infty} \frac{1 + 3\sin^4(2x)}{\sqrt{x}} \,\mathrm{d}x
+            \qquad
+            \int\limits_{2}^{\infty} \frac{1+\cos^2(x)}{\sqrt{x}\big(2-\sin^4(x)\big)} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{1}^{\infty} \frac{\mathrm{e}^{-x}}{x} \,\mathrm{d}x
+            \qquad
+            \int\limits_{1}^{\infty} \mathrm{e}^{-x^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_{1/2}^{\infty} \mathrm{e}^{-x^2} \,\mathrm{d}x
+            \qquad
+
+        \]
+    </li>
+    -->
+    <!--
+    <li>
+        Evaluate each of the following integrals,
+        determining if the area described is or isn’t finite.
+        Some of these are borrowed from
+        <a href="http://tutorial.math.lamar.edu/Problems/CalcII/ImproperIntegrals.aspx">Paul’s Online Math Notes</a>,
+        so their solutions can be found there.
+        \[
+            \int\limits_{0}^{\infty} x\mathrm{e}^{-x} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\pi/2} \frac{\cos(x)}{\sqrt{\sin(x)}} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{\pi/2} \frac{\cos(x)}{\sqrt{\sin(x)}} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{1}^{\infty} \frac{1}{x^{1/3}} \,\mathrm{d}x
+            \qquad
+            \int\limits_{-5}^{1} \frac{1}{10+2z} \,\mathrm{d}z
+            \qquad
+            \int\limits_{0}^{4} \frac{x}{x^2-9} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{-\infty}^{\infty} \frac{6w^3}{(w^4+1)^2} \,\mathrm{d}w
+            \qquad
+            \int\limits_{-1}^{1} \ln|x| \,\mathrm{d}x
+            \qquad
+            \int\limits_{1}^{\infty} \frac{1}{x^3} \,\mathrm{d}x
+        \]
+        \[
+            \int\limits_{-\infty}^{1} \frac{3}{1+x^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_{-\infty}^{0} \frac{\mathrm{e}^{\frac{1}{x}}}{x^2} \,\mathrm{d}x
+            \qquad
+            \int\limits_{0}^{2} \frac{1}{(x-1)^4} \,\mathrm{d}x
+        \]
+    </li>
+    -->
+</ol>
+</main>
+</body>
+
+</html>
+

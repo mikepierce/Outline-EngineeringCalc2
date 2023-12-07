@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Mike Pierce">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>Math136 Display Formulas | Mike Pierce </title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    
-    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
-    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
-    <style>main{column-count:1;}</style>
-    <style>body{font-size:16pt; background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
-    <title>Math136 | Display Formulas </title>
+    <style>main{column-count:1;} body{font-size:16pt;}</style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
 <body>
@@ -39,24 +39,14 @@
 </p>
 <hr>
 <p>
-    \[
-    \int \tan(x) \,\mathrm{d}x = \ln|\sec(x)| +C
-    \qquad
-    \int \ln(x) \,\mathrm{d}x = x\ln(x) - x +C
-    \]
+    \[ \int \tan(x) \,\mathrm{d}x = \ln|\sec(x)| +C \qquad \int \ln(x) \,\mathrm{d}x = x\ln(x) - x +C \]
 </p>
 <p>
-    \[
-    \int \sec(x) \,\mathrm{d}x = \ln|\sec(x) + \tan(x)| +C
-    \]
+    \[ \int \sec(x) \,\mathrm{d}x = \ln|\sec(x) + \tan(x)| +C \]
 </p>
-<!--
 <p>
-    \[
-    \int \sec^3(x) \,\mathrm{d}x = \sec(x)\tan(x) - \int\sec(x)\tan^2(x)\,\mathrm{d}x
-    \]
+\[ \int \sec^3(x) \,\mathrm{d}x = \frac{1}{2}\sec(x)\tan(x) + \frac{1}{2}\int\sec(x)\,\mathrm{d}x \]
 </p>
--->
 <hr>
 <p>
     \[
@@ -73,20 +63,20 @@
 <hr>
 <p>
     \[
-    \mathrm{e}^x = \sum_{n=0}^\infty \frac{x^n}{n!}
+    \mathrm{e}^x = \sum_{n=0}^\infty \frac{1}{n!}x^n
     \qquad
-    \sin(x) = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)!}
+    \sin(x) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}
     \qquad
-    \cos(x) = \sum_{n=0}^\infty (-1)^n\frac{x^{2n}}{(2n)!}
+    \cos(x) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n)!}x^{2n}
     \]
     \[
-    \frac{1}{1-x} = \sum_{n=0}^\infty x^n \;\text{ for } |x|\lt 1
+    \frac{1}{1-x} = \sum_{n=0}^\infty x^n \;\text{ for } |x| \lt 1
     \qquad
     \qquad
-    \ln(1+x) = \sum_{n=1}^\infty (-1)^{n-1}\frac{x^n}{n} \;\text{ for } |x|\leq 1
+    \ln(1+x) = \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n}x^n \;\text{ for } |x| \lt 1 
     \]
     \[
-    \arctan(x) = \sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{(2n+1)} \;\text{ for } |x|\leq 1
+    \arctan(x) = \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)}x^{2n+1} \;\text{ for } |x| \lt 1
     \]
 </p>
 <!--

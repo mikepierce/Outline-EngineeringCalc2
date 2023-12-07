@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math136 Natural Logarithms | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Natural Logarithms</h1>
+</header>
+<main>
+<blockquote>
+    \[
+    \ln(x) = \int\limits_1^x \frac{1}{t}\,\mathrm{d}t
+    \qquad
+    \int\limits \frac{1}{x}\,\mathrm{d}x = \ln|x| + C
+    \qquad
+    \frac{\mathrm{d}}{\mathrm{d}x}\ln|x| = \frac{1}{x}
+    \]
+</blockquote>
+<ol>
+    <li>
+        Using this “geometric” definition of \(\ln(x)\) as an integral,
+        show that the number \(\ln(2)\) must be between ½ and ¾.
+        Can you come up with tighter bounds?
+    </li>
+    <li>
+        Calculate the derivatives of the following functions explicitly:
+        \[
+        f(x) = \ln(7x^2)
+        \qquad
+        g(x) = \ln\big(\cos^2(x)\big)
+        \qquad
+        h(x) = x\ln\!\big(\ln(x)\big)
+        \]
+    </li>
+    <li>
+        Calculate the exact values of the following definite integrals:
+        \[
+        \int\limits_0^{\pi/4} \tan(x) \,\mathrm{d}x
+        \qquad
+        \int\limits_1^\mathrm{e} \frac{\ln(x)}{x} \,\mathrm{d}x
+        \qquad
+        \int\limits_2^3 \frac{x^2}{x^3-5} \,\mathrm{d}x
+        \]
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+
