@@ -1,9 +1,4 @@
-[![Screenshot of my instance of this outline](https://org.coloradomesa.edu/~mapierce2/136/screenshot.webp)](https://org.coloradomesa.edu/~mapierce2/136/)
-
 # [Engineering Calc II](https://org.coloradomesa.edu/~mapierce2/136/)
-
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY%20NC%20SA%204.0-00B4D8)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a-Coffee-orange)](https://www.buymeacoffee.com/mpierce)
 
 This is the schedule/outline of my ~16 week second-semester calculus course
 designed for an class of prospective engineers.
